@@ -1,0 +1,4 @@
+# Redirect all IP addresses to http://kory-walton.com
+RewriteCond %{HTTP_HOST} ^104.236.35.151
+RewriteRune (.*) http://kory-walton.com/$1 [R=301,L]
+
