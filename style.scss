@@ -48,7 +48,7 @@ a {
 
 /*****************************************************/
 
-<!--[if IE]>
+/*<!--[if IE]>
   .header {
     background-image:url(images/bluetriangles.jpg) !important;
   }
@@ -60,7 +60,7 @@ a {
   .footerWrapper {
     background-image:url(images/bluetriangles.jpg) !important;
   }
-<![endif]-->
+<![endif]-->*/
 
 
 /******************************************************/
@@ -1332,6 +1332,70 @@ footer {
     }
   }
 }
+
+
+.clientwork {
+  width: 135px;
+  position:absolute;
+  top: -21px;
+  left: 10px;
+  height: 100px;
+  background-image: url(images/clientwork.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display:block;
+  text-align: center;
+  font-family: 'amaticbold';
+  letter-spacing: 1px;
+  transition: top 0.5s ease;
+  z-index: 100;
+  
+  .clienttext {
+    font-size: 22px;
+    color: $hdblue;
+    display:block;
+  }
+
+  .new {
+    color: $hdbrightblue;
+    display:block;
+    margin-top:5px;
+    margin-bottom: -15px;
+  }
+
+}
+
+.clientwork:hover {
+  top: 0px;
+}
+
+.imgClient {
+  width: 25%;
+  display:inline;
+  padding-right: 5%;
+  min-width:170px;
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+
+.recents {
+  display: block;
+  text-align: center;
+}
+
+.msfClient {
+  width: 90%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+
+  @media (max-width: 600px) {
+      width: 100%;
+  }
+
+}
+
 
 
 
