@@ -997,6 +997,74 @@ footer {
     .subButter img.website.app {
       max-width: 730px; }
 
+.subThk {
+  /*.emails {
+    background-color:pink;
+    width: 100%;
+    .website {
+      width: 20%;
+      float:left;
+      
+    } 
+  }*/ }
+  .subThk h1 {
+    width: 100%; }
+  .subThk .logoWrapper {
+    margin: auto;
+    width: 80%;
+    max-width: 500px; }
+    .subThk .logoWrapper .logo {
+      float: left; }
+      .subThk .logoWrapper .logo.left {
+        width: 35%; }
+      .subThk .logoWrapper .logo.right {
+        width: 55%; }
+        @media (min-width: 600px) {
+          .subThk .logoWrapper .logo.right {
+            margin-left: 10%;
+            margin-top: 40px; } }
+    @media (max-width: 600px) {
+      .subThk .logoWrapper {
+        width: 100%; }
+        .subThk .logoWrapper .logo {
+          width: 80%;
+          float: none; } }
+  .subThk .text {
+    width: 70%;
+    float: left; }
+  .subThk .feature {
+    width: 75% !important;
+    max-width: 540px !important; }
+  .subThk .emails {
+    background-color: pink;
+    width: 100%;
+    height: 360px;
+    margin: auto !important; }
+    .subThk .emails .website {
+      width: 40%;
+      float: left;
+      margin-left: 6%; }
+  .subThk .mobile {
+    width: 100%;
+    display: block;
+    margin: auto;
+    float: left; }
+    .subThk .mobile .website {
+      width: 20%;
+      float: left;
+      margin-left: 4%; }
+      @media (max-width: 600px) {
+        .subThk .mobile .website {
+          width: 44%; } }
+  .subThk img {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 10px; }
+    .subThk img.website {
+      width: 100%;
+      max-width: 850px; }
+
 .subVoyage img {
   display: block;
   margin: auto;
@@ -1059,3 +1127,5 @@ footer {
   @media (max-width: 600px) {
     .msfClient {
       width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */
