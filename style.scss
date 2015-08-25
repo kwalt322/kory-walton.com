@@ -1103,6 +1103,117 @@ footer {
   } 
 }
 
+.honestkitchen {
+  background-size: 114%;
+  background-position: -13px 0px;
+  background-color:pink;
+  float:right;
+  width: 42%;
+  height: 220px;
+  background-image: url(images/sprites_thkdesktop.png);
+
+  /*@media (max-width: 1150px) {
+    background-size: 634%;
+    padding-bottom: 38%;
+    background-position: 6% 96%;
+  }
+
+  @media (max-width: 900px) {
+    background-size: 290%;
+    padding-bottom: 39%;
+    background-position: 6% 96%;
+  }
+
+  @media (max-width: 600px) {
+    background-size: 310%;
+    padding-bottom: 48%;
+    background-position: 9% 96%;
+    width: 100% !important;
+  }*/
+
+  span {
+    background-size: 100%;
+    background-position: 0px -215px;
+    background-repeat: no-repeat;
+    width: 34%;
+    background-color: rgb(248,248,248);
+    height: 220px;
+    position:absolute;
+    background-image: url(images/sprites_thkdesktop.png);
+    opacity: 0;
+    -webkit-transition: opacity .6s ease;
+    -moz-transition: opacity .6s ease;
+    -o-transition: opacity .6s ease;
+    transition: opacity .6s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+    /*width:100%;
+    height: 100%;
+    position:absolute;
+    background-image:url(images/sprites_thkdesktop.png);
+    background-position: 158% 92%;
+    background-size: 486%;
+    opacity: 0;
+    -webkit-transition: opacity .6s ease;
+    -moz-transition: opacity .6s ease;
+    -o-transition: opacity .6s ease;
+    transition: opacity .6s ease;
+    background-color: rgb(248,248,248);
+
+    @media (max-width: 1150px) {
+      background-size: 656%;
+      background-position: 151% 92%;
+    }
+
+    &:hover {
+      @media (min-width: 900px) {
+      opacity: 1;
+      }
+    }
+
+    &.imgRightalt {
+    width: 44%;
+    float:right;
+    display:block;
+    background-image:url(images/sprites_thkdesktop.png);
+    height:0;
+    background-repeat:no-repeat;
+    position:relative;
+    top: -30px;
+    background-color:lime;
+
+    @media (max-width: 900px) {
+      top: 0;
+      float:none;
+      margin: auto;
+      background-image:url(images/sprites_thkdesktop.png);
+      background-color:pink;
+      width: 85%;
+    }*/
+  
+
+
+  
+  /*background-color:pink;
+  width: 44%;
+  height: 182px;
+  background-image: url(images/sprites_thkdesktop.png);
+  float:right;
+  background-size: cover;
+  opacity: .1;
+  -webkit-transition: opacity .6s ease;
+  -moz-transition: opacity .6s ease;
+  -o-transition: opacity .6s ease;
+  transition: opacity .6s ease;
+
+  &:hover {
+    opacity: 1;
+  }*/
 
 /* Sub Pages */
 
@@ -1354,17 +1465,27 @@ footer {
     .feature {
       width: 75% !important;
       max-width: 540px !important;
+      @media (max-width: 600px) {
+        width: 100% !important;
+      }
     }
 
     .emails {
-      background-color:pink;
       width: 100%;
       height: 360px;
       margin:auto !important;
+      @media (max-width: 600px) {
+        display:inline;
+      }
       .website {
         width: 40%;
         float:left;
         margin-left: 6%;
+        @media (max-width: 600px) {
+          width: 100%;
+          margin-left: 0px;
+          float:none;
+        }
       }
     }
 
