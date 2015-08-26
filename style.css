@@ -867,36 +867,34 @@ footer {
         opacity: 1; } }
 
 .honestkitchen {
-  background-size: 114%;
-  background-position: -13px 0px;
-  background-color: pink;
+  background-size: 405px;
+  background-position: 0px -18px;
   float: right;
   width: 42%;
   height: 220px;
-  background-image: url(images/sprites_thkdesktop.png);
-  /*@media (max-width: 1150px) {
-    background-size: 634%;
-    padding-bottom: 38%;
-    background-position: 6% 96%;
-  }
-
+  background-image: url(images/sprites_thkdesktop.png); }
+  @media (max-width: 1150px) {
+    .honestkitchen {
+      background-size: 447px;
+      background-position: -70px -16px;
+      height: 240px; } }
   @media (max-width: 900px) {
-    background-size: 290%;
-    padding-bottom: 39%;
-    background-position: 6% 96%;
-  }
-
-  @media (max-width: 600px) {
-    background-size: 310%;
-    padding-bottom: 48%;
-    background-position: 9% 96%;
-    width: 100% !important;
-  }*/ }
+    .honestkitchen {
+      background-image: url(images/sprites_thkmobile.png);
+      height: 235px;
+      background-size: 470px;
+      background-repeat: no-repeat;
+      background-position: center 0px;
+      width: 100% !important; } }
+  @media (max-width: 500px) {
+    .honestkitchen {
+      background-size: contain;
+      height: 170px; } }
   .honestkitchen span {
-    background-size: 100%;
-    background-position: 0px -215px;
+    background-size: 368px;
+    background-position: 0px -237px;
     background-repeat: no-repeat;
-    width: 34%;
+    width: 32%;
     background-color: #f8f8f8;
     height: 220px;
     position: absolute;
@@ -906,67 +904,19 @@ footer {
     -moz-transition: opacity .6s ease;
     -o-transition: opacity .6s ease;
     transition: opacity .6s ease; }
-    .honestkitchen span:hover {
-      opacity: 1; }
-
-    /*width:100%;
-    height: 100%;
-    position:absolute;
-    background-image:url(images/sprites_thkdesktop.png);
-    background-position: 158% 92%;
-    background-size: 486%;
-    opacity: 0;
-    -webkit-transition: opacity .6s ease;
-    -moz-transition: opacity .6s ease;
-    -o-transition: opacity .6s ease;
-    transition: opacity .6s ease;
-    background-color: rgb(248,248,248);
-
     @media (max-width: 1150px) {
-      background-size: 656%;
-      background-position: 151% 92%;
-    }
+      .honestkitchen span {
+        background-size: 309px;
+        background-position: 8px -177px;
+        height: 271px; } }
+    @media (max-width: 950px) {
+      .honestkitchen span {
+        background-size: 286px;
+        background-position: -2px -165px; } }
+    @media (min-width: 900px) {
+      .honestkitchen span:hover {
+        opacity: 1; } }
 
-    &:hover {
-      @media (min-width: 900px) {
-      opacity: 1;
-      }
-    }
-
-    &.imgRightalt {
-    width: 44%;
-    float:right;
-    display:block;
-    background-image:url(images/sprites_thkdesktop.png);
-    height:0;
-    background-repeat:no-repeat;
-    position:relative;
-    top: -30px;
-    background-color:lime;
-
-    @media (max-width: 900px) {
-      top: 0;
-      float:none;
-      margin: auto;
-      background-image:url(images/sprites_thkdesktop.png);
-      background-color:pink;
-      width: 85%;
-    }*/
-  /*background-color:pink;
-  width: 44%;
-  height: 182px;
-  background-image: url(images/sprites_thkdesktop.png);
-  float:right;
-  background-size: cover;
-  opacity: .1;
-  -webkit-transition: opacity .6s ease;
-  -moz-transition: opacity .6s ease;
-  -o-transition: opacity .6s ease;
-  transition: opacity .6s ease;
-
-  &:hover {
-    opacity: 1;
-  }*/
 /* Sub Pages */
 .subKahs img {
   display: block;
