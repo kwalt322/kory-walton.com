@@ -1441,16 +1441,6 @@ footer {
       }
     }
 
-    /*.emails {
-      background-color:pink;
-      width: 100%;
-      .website {
-        width: 20%;
-        float:left;
-        
-      } 
-    }*/
-
   .mobile {
     width: 100%;
     display:block;
@@ -1476,6 +1466,26 @@ footer {
     &.website {
       width: 100%;
       max-width: 850px;
+    }
+  }
+}
+
+.subMsf {
+  .logo {
+    &.left {
+      margin-top: 65px;
+      @media (max-width: 600px) {
+        width: 60% !important;
+      }
+    }
+  }
+  .animation {
+    width: 100%;
+    max-width: 850px;
+  }
+  .website {
+    &.email {
+      max-width: 380px;
     }
   }
 }

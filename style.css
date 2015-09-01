@@ -1048,83 +1048,84 @@ footer {
     .subButter img.website.app {
       max-width: 730px; }
 
-.subThk {
-  /*.emails {
-    background-color:pink;
-    width: 100%;
-    .website {
-      width: 20%;
-      float:left;
-      
-    } 
-  }*/ }
-  .subThk h1 {
-    width: 100%; }
-  .subThk .logoWrapper {
-    margin: auto;
-    width: 80%;
-    max-width: 500px; }
-    .subThk .logoWrapper .logo {
-      float: left; }
-      .subThk .logoWrapper .logo.left {
-        width: 35%; }
-      .subThk .logoWrapper .logo.right {
-        width: 55%; }
-        @media (min-width: 600px) {
-          .subThk .logoWrapper .logo.right {
-            margin-left: 10%;
-            margin-top: 40px; } }
-    @media (max-width: 600px) {
-      .subThk .logoWrapper {
-        width: 100%; }
-        .subThk .logoWrapper .logo {
-          width: 80%;
-          float: none; } }
-  .subThk .text {
-    width: 70%;
+.subThk h1 {
+  width: 100%; }
+.subThk .logoWrapper {
+  margin: auto;
+  width: 80%;
+  max-width: 500px; }
+  .subThk .logoWrapper .logo {
     float: left; }
-  .subThk .feature {
-    width: 75% !important;
-    max-width: 540px !important; }
+    .subThk .logoWrapper .logo.left {
+      width: 35%; }
+    .subThk .logoWrapper .logo.right {
+      width: 55%; }
+      @media (min-width: 600px) {
+        .subThk .logoWrapper .logo.right {
+          margin-left: 10%;
+          margin-top: 40px; } }
+  @media (max-width: 600px) {
+    .subThk .logoWrapper {
+      width: 100%; }
+      .subThk .logoWrapper .logo {
+        width: 80%;
+        float: none; } }
+.subThk .text {
+  width: 70%;
+  float: left; }
+.subThk .feature {
+  width: 75% !important;
+  max-width: 540px !important; }
+  @media (max-width: 600px) {
+    .subThk .feature {
+      width: 100% !important; } }
+.subThk .emails {
+  width: 100%;
+  display: inline-block;
+  margin: auto !important; }
+  @media (max-width: 600px) {
+    .subThk .emails {
+      display: inline; } }
+  .subThk .emails .website {
+    width: 40%;
+    float: left;
+    margin-left: 6%; }
     @media (max-width: 600px) {
-      .subThk .feature {
-        width: 100% !important; } }
-  .subThk .emails {
-    width: 100%;
-    display: inline-block;
-    margin: auto !important; }
+      .subThk .emails .website {
+        width: 100%;
+        margin-left: 0px;
+        float: none; } }
+.subThk .mobile {
+  width: 100%;
+  display: block;
+  margin: auto;
+  float: left; }
+  .subThk .mobile .website {
+    width: 20%;
+    float: left;
+    margin-left: 4%; }
     @media (max-width: 600px) {
-      .subThk .emails {
-        display: inline; } }
-    .subThk .emails .website {
-      width: 40%;
-      float: left;
-      margin-left: 6%; }
-      @media (max-width: 600px) {
-        .subThk .emails .website {
-          width: 100%;
-          margin-left: 0px;
-          float: none; } }
-  .subThk .mobile {
+      .subThk .mobile .website {
+        width: 44%; } }
+.subThk img {
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 10px; }
+  .subThk img.website {
     width: 100%;
-    display: block;
-    margin: auto;
-    float: left; }
-    .subThk .mobile .website {
-      width: 20%;
-      float: left;
-      margin-left: 4%; }
-      @media (max-width: 600px) {
-        .subThk .mobile .website {
-          width: 44%; } }
-  .subThk img {
-    display: block;
-    margin: auto;
-    margin-bottom: 30px;
-    margin-top: 10px; }
-    .subThk img.website {
-      width: 100%;
-      max-width: 850px; }
+    max-width: 850px; }
+
+.subMsf .logo.left {
+  margin-top: 65px; }
+  @media (max-width: 600px) {
+    .subMsf .logo.left {
+      width: 60% !important; } }
+.subMsf .animation {
+  width: 100%;
+  max-width: 850px; }
+.subMsf .website.email {
+  max-width: 380px; }
 
 .subVoyage img {
   display: block;
