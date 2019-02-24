@@ -1,0 +1,37 @@
+{
+  "name": "FED-Harp-Gulp-Template",
+  "version": "1.0.0",
+  "description": "The dependencies needed for the HGB boilerplate",
+  "private": true,
+  "main": "gulpfile.js",
+  "author": "David Wallin",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.4",
+    "browser-sync": "^1.9.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-sass": "^3.2.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp.spritesmith": "^6.3.0",
+    "harp": "0.27.0",
+    "imagemin-guetzli": "^0.1.5",
+    "imagemin-pngquant": "^5.1.0",
+    "merge-stream": "^1.0.1",
+    "sassdoc": "^2.1.20",
+    "spritesmith": "^3.1.1",
+    "unminified-webpack-plugin": "^1.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "webpack": "^2.7.0",
+    "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "gulp-prettier": "^1.1.0",
+    "node-sass": "^4.9.0"
+  }
+}
