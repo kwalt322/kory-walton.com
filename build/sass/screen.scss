@@ -5,10 +5,58 @@
 $base-color: #C6538C;
 
 
+/// Global Fonts
+@font-face {
+  font-family: 'amaticscregular';
+  src: url("/fonts/fonts/amatic/amatic-regular-webfont.eot");
+  src: url("/fonts/amatic/amatic-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/amatic/amatic-regular-webfont.woff2") format("woff2"), url("/fonts/amatic/amatic-regular-webfont.woff") format("woff"), url("/fonts/amatic/amatic-regular-webfont.ttf") format("truetype"), url("/fonts/amatic/amatic-regular-webfont.svg#amatic_scregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'amaticbold';
+  src: url("/fonts/amatic/amatic-bold-webfont.eot");
+  src: url("/fonts/amatic/amatic-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/amatic/amatic-bold-webfont.woff2") format("woff2"), url("/fonts/amatic/amatic-bold-webfont.woff") format("woff"), url("/fonts/amatic/amatic-bold-webfont.ttf") format("truetype"), url("/fonts/amatic/amatic-bold-webfont.svg#amaticbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'tisaproregular';
+  src: url("/fonts/tisa/tisapro-regular-webfont.eot");
+  src: url("/fonts/tisa/tisapro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/tisa/tisapro-regular-webfont.woff2") format("woff2"), url("/fonts/tisa/tisapro-regular-webfont.woff") format("woff"), url("/fonts/tisa/tisapro-regular-webfont.ttf") format("truetype"), url("/fonts/tisa/tisapro-regular-webfont.svg#tisaproregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
-body {background: rgba(245,250,255,1);}
+
+
+
+/// Page Styles
+h1, h2, h3, h4 {
+	font-family: 'amaticbold';
+	letter-spacing: 2px;
+}
+
+h1 {font-size: 50px;}
+
+p {
+	color: #605f5e;
+	line-height: 170%;
+	font-size: 22px;
+}
+
+body {
+	background: rgba(245,250,255,1);
+	font-family: 'tisaproregular';
+}
+
+
+
+
 .gradient-blue {
-	background: -moz-linear-gradient(top, rgba(0,43,64,1) 14%, rgba(43,79,98,1) 45%, rgba(245,250,255,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(0,43,64,1) 14%,rgba(43,79,98,1) 45%,rgba(245,250,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(0,43,64,1) 14%,rgba(43,79,98,1) 45%,rgba(245,250,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: -moz-linear-gradient(top, rgba(0,43,64,1) 14%, rgba(43,79,98,1) 45%, rgba(245,250,255,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,43,64,1) 14%,rgba(43,79,98,1) 45%,rgba(245,250,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(0,43,64,1) 14%,rgba(43,79,98,1) 45%,rgba(245,250,255,1) 100%);
+}
+
+.bg-code {
+	background-image: url("/images/bg_code.png");
+	background-repeat: no-repeat;
 }
