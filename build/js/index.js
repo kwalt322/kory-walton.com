@@ -1,9 +1,6 @@
 // Now supporting Babel 7.2
 // Testing out some ES6 features. Feel free to delete this.
 
-// require
-let test = require("./test");
-test.foo();
 
 // constants
 const PI = 3.142;

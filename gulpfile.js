@@ -5,8 +5,8 @@ var reload      = browserSync.reload;
 var harp        = require("harp");
 var sass        = require("gulp-sass");
 var sourcemaps  = require("gulp-sourcemaps");
-var autoprefixer = require("gulp-autoprefixer");
 var sassdoc     = require("sassdoc");
+var autoprefixer = require("gulp-autoprefixer");
 var spritesmith = require("gulp.spritesmith");
 var buffer      = require("vinyl-buffer");
 var csso = require("gulp-csso");
@@ -31,7 +31,7 @@ var compilePath = "./static";
 var cssInput = buildFolder + "/sass/*.scss";
 var cssOutput = outputFolder + "/css";
 
-var imagesFolder = outputFolder + "/images/";
+var imagesFolder = outputFolder + '/images/';
 var spriteInput = buildFolder + "/sprites/*.png";
 var spriteInput2x = buildFolder + "/sprites/*_2x.png";
 var spriteOutput = imagesFolder;
@@ -99,6 +99,7 @@ gulp.task('sassdoc', function () {
     .pipe(sassdoc());
 });
 
+
 gulp.task("webpack", function() {
   return gulp.src(javascriptInput)
     .pipe(gulpWebpack(webpackOptions, webpack))
@@ -108,11 +109,12 @@ gulp.task("webpack", function() {
 gulp.task("sprite", function () {
   // Generate our spritesheet
   var spriteData = gulp.src(spriteInput).pipe(spritesmith({
-    imgName: "sprites.png",
-    cssName: "_sprites.scss",
-    retinaSrcFilter: spriteInput2x,
-    retinaImgName: 'sprites-2x.png',
-    padding: 6
+    // Filter out `_2x` (retina) images to separate spritesheet
+        retinaSrcFilter: spriteInput2x,
+        retinaImgName: '../images/spritesheet-2x.png',
+        imgName: "../images/spritesheet.png",
+        cssName: "_spritesheet.scss",
+        padding: 6
   }));
 
   // Pipe image stream through image optimizer and onto disk
@@ -174,6 +176,7 @@ gulp.task("serve", function () {
        .on("change", function(event) {
         console.log("File " + event.path + " was " + event.type);
       });
+
 
 
     gulp.watch(buildFolder + "/js/**/*.js", [ "webpack" ])

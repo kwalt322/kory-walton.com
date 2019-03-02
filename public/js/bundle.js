@@ -63,24 +63,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports) {
-
-var test = {};
-
-test.foo = function () {
-  console.log("require works");
-};
-
-module.exports = test;
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -90,11 +78,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 // Now supporting Babel 7.2
 // Testing out some ES6 features. Feel free to delete this.
-// require
-var test = __webpack_require__(0);
-
-test.foo(); // constants
-
+// constants
 var PI = 3.142; // string interpolation
 
 var message = "The answer is ".concat(PI);

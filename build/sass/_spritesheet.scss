@@ -9,45 +9,69 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites;
-$megaman-name: 'megaman';
-$megaman-x: 0px;
-$megaman-y: 0px;
-$megaman-offset-x: 0px;
-$megaman-offset-y: 0px;
-$megaman-width: 450px;
-$megaman-height: 465px;
-$megaman-total-width: 450px;
-$megaman-total-height: 465px;
-$megaman-image: 'sprites.png';
-$megaman: (0px, 0px, 0px, 0px, 450px, 465px, 450px, 465px, 'sprites.png', 'megaman', );
-$megaman-2x-name: 'megaman_2x';
-$megaman-2x-x: 0px;
-$megaman-2x-y: 0px;
-$megaman-2x-offset-x: 0px;
-$megaman-2x-offset-y: 0px;
-$megaman-2x-width: 900px;
-$megaman-2x-height: 930px;
-$megaman-2x-total-width: 900px;
-$megaman-2x-total-height: 930px;
-$megaman-2x-image: 'sprites-2x.png';
-$megaman-2x: (0px, 0px, 0px, 0px, 900px, 930px, 900px, 930px, 'sprites-2x.png', 'megaman_2x', );
-$spritesheet-width: 450px;
-$spritesheet-height: 465px;
-$spritesheet-image: 'sprites.png';
-$spritesheet-sprites: ($megaman, );
-$spritesheet: (450px, 465px, 'sprites.png', $spritesheet-sprites, );
-$retina-spritesheet-width: 900px;
-$retina-spritesheet-height: 930px;
-$retina-spritesheet-image: 'sprites-2x.png';
-$retina-spritesheet-sprites: ($megaman-2x, );
-$retina-spritesheet: (900px, 930px, 'sprites-2x.png', $retina-spritesheet-sprites, );
+$logo-chase-name: 'logo_chase';
+$logo-chase-x: 0px;
+$logo-chase-y: 0px;
+$logo-chase-offset-x: 0px;
+$logo-chase-offset-y: 0px;
+$logo-chase-width: 200px;
+$logo-chase-height: 60px;
+$logo-chase-total-width: 200px;
+$logo-chase-total-height: 126px;
+$logo-chase-image: '../images/spritesheet.png';
+$logo-chase: (0px, 0px, 0px, 0px, 200px, 60px, 200px, 126px, '../images/spritesheet.png', 'logo_chase', );
+$mandt-name: 'mandt';
+$mandt-x: 0px;
+$mandt-y: 66px;
+$mandt-offset-x: 0px;
+$mandt-offset-y: -66px;
+$mandt-width: 200px;
+$mandt-height: 60px;
+$mandt-total-width: 200px;
+$mandt-total-height: 126px;
+$mandt-image: '../images/spritesheet.png';
+$mandt: (0px, 66px, 0px, -66px, 200px, 60px, 200px, 126px, '../images/spritesheet.png', 'mandt', );
+$logo-chase-2x-name: 'logo_chase_2x';
+$logo-chase-2x-x: 0px;
+$logo-chase-2x-y: 0px;
+$logo-chase-2x-offset-x: 0px;
+$logo-chase-2x-offset-y: 0px;
+$logo-chase-2x-width: 400px;
+$logo-chase-2x-height: 120px;
+$logo-chase-2x-total-width: 400px;
+$logo-chase-2x-total-height: 252px;
+$logo-chase-2x-image: '../images/spritesheet-2x.png';
+$logo-chase-2x: (0px, 0px, 0px, 0px, 400px, 120px, 400px, 252px, '../images/spritesheet-2x.png', 'logo_chase_2x', );
+$mandt-2x-name: 'mandt_2x';
+$mandt-2x-x: 0px;
+$mandt-2x-y: 132px;
+$mandt-2x-offset-x: 0px;
+$mandt-2x-offset-y: -132px;
+$mandt-2x-width: 400px;
+$mandt-2x-height: 120px;
+$mandt-2x-total-width: 400px;
+$mandt-2x-total-height: 252px;
+$mandt-2x-image: '../images/spritesheet-2x.png';
+$mandt-2x: (0px, 132px, 0px, -132px, 400px, 120px, 400px, 252px, '../images/spritesheet-2x.png', 'mandt_2x', );
+$spritesheet-width: 200px;
+$spritesheet-height: 126px;
+$spritesheet-image: '../images/spritesheet.png';
+$spritesheet-sprites: ($logo-chase, $mandt, );
+$spritesheet: (200px, 126px, '../images/spritesheet.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 400px;
+$retina-spritesheet-height: 252px;
+$retina-spritesheet-image: '../images/spritesheet-2x.png';
+$retina-spritesheet-sprites: ($logo-chase-2x, $mandt-2x, );
+$retina-spritesheet: (400px, 252px, '../images/spritesheet-2x.png', $retina-spritesheet-sprites, );
 
 // These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
 //
 // The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
-$megaman-group-name: 'megaman';
-$megaman-group: ('megaman', $megaman, $megaman-2x, );
-$retina-groups: ($megaman-group, );
+$logo-chase-group-name: 'logo_chase';
+$logo-chase-group: ('logo_chase', $logo-chase, $logo-chase-2x, );
+$mandt-group-name: 'mandt';
+$mandt-group: ('mandt', $mandt, $mandt-2x, );
+$retina-groups: ($logo-chase-group, $mandt-group, );
 
 // The provided mixins are intended to be used with the array-like variables
 //
