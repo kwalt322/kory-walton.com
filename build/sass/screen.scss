@@ -215,7 +215,7 @@ nav, footer {
 			}
 		} 
 	}
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(sm) {
 		overflow: visible;
 		background:#002b40;
 		.logo {
