@@ -9,7 +9,7 @@ $base-color: #C6538C;
 /// Global Fonts
 @font-face {
   font-family: 'amaticscregular';
-  src: url("/fonts/fonts/amatic/amatic-regular-webfont.eot");
+  src: url("/fonts/amatic/amatic-regular-webfont.eot");
   src: url("/fonts/amatic/amatic-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/amatic/amatic-regular-webfont.woff2") format("woff2"), url("/fonts/amatic/amatic-regular-webfont.woff") format("woff"), url("/fonts/amatic/amatic-regular-webfont.ttf") format("truetype"), url("/fonts/amatic/amatic-regular-webfont.svg#amatic_scregular") format("svg");
   font-weight: normal;
   font-style: normal; }
@@ -48,39 +48,76 @@ body {
 	font-family: 'tisaproregular';
 }
 
+@include media-breakpoint-down(sm) {
+	a {&:hover {text-decoration: none!important;}}
+	.border-right {border-right: 3px solid #fdcc00 !important;}
+}
+
+
+
 nav, footer {
 	font-family: 'amaticbold';
 	letter-spacing: 1px;
 	.nav-item {
 		font-size: 26px;
 		position: relative;
-		&:hover {
-			.nav-link {
-				&:after {
-					opacity: 1;
-				    -webkit-transform: translateY(0px);
-				    -moz-transform: translateY(0px);
-				    transform: translateY(0px);
+		// mobile nav populate animation
+		// @keyframes navin {
+		// 	0% {
+		// 		transform: translate(6px, 0px);
+		// 		opacity: 0;
+		// 	}
+		// 	100% {
+		// 		transform: translate(0px, 0px);
+		// 		opacity: 1;
+		// 	}
+		// }
+		@include media-breakpoint-down(md) {
+			// &:nth-child(1) {
+			// 	animation-delay: 0s;
+			// 	-webkit-animation: navin .35s linear 1;
+	  //   		animation: navin .35s linear 1;
+	  //   		opacity: 1;
+			// }
+   //  		&:nth-child(2) {
+			// 	animation-delay: 1s;
+			// 	-webkit-animation: navin .35s linear 1;
+	  //   		animation: navin .35s linear 1;
+	  //   		opacity: 1;
+			// }
+		}
+		// end mobile nav populate animation
+		@include media-breakpoint-up(md) {
+			&:hover {
+				.nav-link {
+					&:after {
+						opacity: 1;
+					    -webkit-transform: translateY(0px);
+					    -moz-transform: translateY(0px);
+					    transform: translateY(0px);
+					}
 				}
 			}
 		}
 		.nav-link {
 			color: #ffffff;
-			&:after {
-				position: absolute;
-			    top: 90%;
-			    left: 0;
-			    width: 100%;
-			    height: 2px;
-			    background: rgba(255,205,62,1);
-			    content: '';
-			    opacity: 0;
-			    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-			    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
-			    transition: opacity 0.3s, transform 0.3s;
-			    -webkit-transform: translateY(10px);
-			    -moz-transform: translateY(10px);
-			    transform: translateY(10px);
+			@include media-breakpoint-up(md) {
+				&:after {
+					position: absolute;
+				    top: 90%;
+				    left: 0;
+				    width: 100%;
+				    height: 2px;
+				    background: rgba(255,205,62,1);
+				    content: '';
+				    opacity: 0;
+				    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+				    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+				    transition: opacity 0.3s, transform 0.3s;
+				    -webkit-transform: translateY(10px);
+				    -moz-transform: translateY(10px);
+				    transform: translateY(10px);
+				}
 			}
 		}
 	}
@@ -95,20 +132,22 @@ nav, footer {
 	background: linear-gradient(to bottom, rgba(0,43,64,1) 14%,rgba(43,79,98,1) 45%,rgba(245,250,255,1) 100%);
 }
 
+.gradient-shadow {
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 70%, rgba(195,195,195,0) 77%, rgba(0,0,0,0.2) 100%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 70%,rgba(195,195,195,0) 77%,rgba(0,0,0,0.2) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 70%,rgba(195,195,195,0) 77%,rgba(0,0,0,0.2) 100%);
+}
+
 .bg-code {
 	background-image: url("/images/bg_code.png");
 	background-repeat: no-repeat;
 }
 
-
 @keyframes arrowpulse {
 	from {transform: translate(0px, 6px);}
 	to {transform: translate(0px, 0px);}
 }
-
-.arrow {
-	animation: arrowpulse .5s linear infinite alternate;
-}
+.arrow {animation: arrowpulse .5s linear infinite alternate;}
 
 
 
@@ -134,7 +173,6 @@ nav, footer {
 	    transition: opacity 0.35s, transform 0.35s;
 	    z-index: 10;
 	}
-
 	.background {
 		transition: transform 0.35s;
 	}
@@ -157,25 +195,44 @@ nav, footer {
 		transition-delay: 0.05s;
 		z-index: 11;
 	}
-	
-	&:hover {
-		.background {
-			transform: scale3d(1.1,1.1,1);
-		}
+	@include media-breakpoint-up(md) {
+		&:hover {
+			.background {
+				transform: scale3d(1.1,1.1,1);
+			}
+			.logo {
+				transform: translate3d(0,-10px,0);
+				opacity: 1;
+			}
+			.text {
+				opacity: 1;
+	    		transform: translate3d(0,5px,0);
+			}
+			&:before {
+			    opacity: 1;
+			    -webkit-transform: translate3d(0,0,0);
+			    transform: translate3d(0,0,0);
+			}
+		} 
+	}
+	@include media-breakpoint-down(md) {
+		overflow: visible;
+		background:#002b40;
 		.logo {
-			transform: translate3d(0,-10px,0);
 			opacity: 1;
+			bottom: 0;
+			width: 30%;
 		}
 		.text {
 			opacity: 1;
-    		transform: translate3d(0,5px,0);
+			bottom:4%;
+			left: 10px;
+			width: 70%;
+			font-size: 16px;
 		}
-		&:before {
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-		}
-	} 
+	}
+
+
 }
 
 
@@ -185,45 +242,44 @@ nav, footer {
 
 
 
+// MOBILE NAV MENU
 
 .animated-icon {
-width: 30px;
-height: 20px;
-position: relative;
-margin: 0px;
--webkit-transform: rotate(0deg);
--moz-transform: rotate(0deg);
--o-transform: rotate(0deg);
-transform: rotate(0deg);
--webkit-transition: .5s ease-in-out;
--moz-transition: .5s ease-in-out;
--o-transition: .5s ease-in-out;
-transition: .5s ease-in-out;
-cursor: pointer;
+	width: 30px;
+	height: 20px;
+	position: relative;
+	margin: 0px;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	cursor: pointer;
 }
 
 .animated-icon span {
-display: block;
-position: absolute;
-height: 3px;
-width: 100%;
-border-radius: 9px;
-opacity: 1;
-left: 0;
--webkit-transform: rotate(0deg);
--moz-transform: rotate(0deg);
--o-transform: rotate(0deg);
-transform: rotate(0deg);
--webkit-transition: .25s ease-in-out;
--moz-transition: .25s ease-in-out;
--o-transition: .25s ease-in-out;
-transition: .25s ease-in-out;
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	border-radius: 9px;
+	opacity: 1;
+	left: 0;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
 }
 
-
-
 .animated-icon span {
-background: #e3f2fd;
+	background: #e3f2fd;
 }
 
 .navbar-collapse {
@@ -239,53 +295,58 @@ background: #e3f2fd;
 		width: 100%;
 		text-align: right;
 	}
+	// fix to push icon from wrapping to new line
 	.navbar-toggler {
 		margin-left: 50px;
 	}
+	// overwritting bootstrap's animation
+	// .collapsing {
+	// 	transition:none;
+	// }
+	// compensating for the push from the nav
+	.negative-margin {
+		margin-top: -165px;
+	}
 }
 
-
-/* Icon 3*/
-
 .animated-icon span:nth-child(1) {
-top: 0px;
+	top: 0px;
 }
 
 .animated-icon span:nth-child(2), .animated-icon span:nth-child(3) {
-top: 10px;
+	top: 10px;
 }
 
 .animated-icon span:nth-child(4) {
-top: 20px;
+	top: 20px;
 }
 
 .animated-icon.open span:nth-child(1) {
-top: 11px;
-width: 0%;
-left: 50%;
+	top: 11px;
+	width: 0%;
+	left: 50%;
 }
 
 .animated-icon.open span:nth-child(2) {
--webkit-transform: rotate(45deg);
--moz-transform: rotate(45deg);
--o-transform: rotate(45deg);
-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .animated-icon.open span:nth-child(3) {
--webkit-transform: rotate(-45deg);
--moz-transform: rotate(-45deg);
--o-transform: rotate(-45deg);
-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
 .animated-icon.open span:nth-child(4) {
-top: 11px;
-width: 0%;
-left: 50%;
+	top: 11px;
+	width: 0%;
+	left: 50%;
 }
 
-/* Icon 4 */
 
 
 
