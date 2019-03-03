@@ -35,12 +35,25 @@ h1, h2, h3, h4 {
 	letter-spacing: 2px;
 }
 
-h1 {font-size: 50px;}
+h1 {
+	font-size: 50px;
+	@include media-breakpoint-down(sm) {font-size: 8vw;}
+	@include media-breakpoint-down(xs) {font-size: 10vw;}
+}
 
 p {
 	color: #605f5e;
 	line-height: 170%;
 	font-size: 22px;
+	@include media-breakpoint-down(sm) {font-size: 3vw;}
+	@include media-breakpoint-down(xs) {font-size: 4vw;}
+}
+
+// overwriting bootstrap's ADA focus styles
+button {
+	&:focus {
+		outline:none;
+	}
 }
 
 body {
@@ -148,6 +161,10 @@ nav, footer {
 	to {transform: translate(0px, 0px);}
 }
 .arrow {animation: arrowpulse .5s linear infinite alternate;}
+.deer {
+	max-width: 280px;
+	min-width: 180px;
+}
 
 
 
@@ -217,19 +234,28 @@ nav, footer {
 	}
 	@include media-breakpoint-down(sm) {
 		overflow: visible;
-		background:#002b40;
+		padding-bottom: 6rem;
+		background: #000000;
+		background: -moz-linear-gradient(top, #000000 55%, #002b40 79%);
+		background: -webkit-linear-gradient(top, #000000 55%,#002b40 79%);
+		background: linear-gradient(to bottom, #000000 55%,#002b40 79%);
 		.logo {
 			opacity: 1;
-			bottom: 0;
-			width: 30%;
+			bottom: 43px;
+			width: auto;
+			max-height: 43px;
 		}
 		.text {
 			opacity: 1;
-			bottom:4%;
-			left: 10px;
-			width: 70%;
+			bottom: 4%;
 			font-size: 16px;
 		}
+	}
+	@include media-breakpoint-down(xs) {
+		background: #000000;
+		background: -moz-linear-gradient(top, #000000 55%, #002b40 69%);
+		background: -webkit-linear-gradient(top, #000000 55%,#002b40 69%);
+		background: linear-gradient(to bottom, #000000 55%,#002b40 69%);
 	}
 
 
@@ -299,11 +325,6 @@ nav, footer {
 	.navbar-toggler {
 		margin-left: 50px;
 	}
-	// overwritting bootstrap's animation
-	// .collapsing {
-	// 	transition:none;
-	// }
-	// compensating for the push from the nav
 	.negative-margin {
 		margin-top: -165px;
 	}
