@@ -70,50 +70,10 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-// Now supporting Babel 7.2
-// Testing out some ES6 features. Feel free to delete this.
-// constants
-var PI = 3.142; // string interpolation
-
-var message = "The answer is ".concat(PI);
-console.log(message); // classes
-
-var Shape =
-/*#__PURE__*/
-function () {
-  function Shape(id, x, y) {
-    _classCallCheck(this, Shape);
-
-    this.id = id;
-    this.move(x, y);
-  }
-
-  _createClass(Shape, [{
-    key: "move",
-    value: function move(x, y) {
-      this.x = x;
-      this.y = y;
-    }
-  }]);
-
-  return Shape;
-}();
-
-var s = new Shape("Square", 5, 5);
-s.move(10, 10);
-console.log(s.x, s.y);
-var a = [1, 2, 3, 4, 5]; // Arrow functions
-
-a = a.filter(function (x) {
-  return x > 3;
+// mobile nav
+$('.second-button').on('click', function () {
+  $('.animated-icon').toggleClass('open');
 });
-console.log(a);
 
 /***/ })
 /******/ ]);
