@@ -41,12 +41,24 @@ h1 {
 	@include media-breakpoint-down(xs) {font-size: 10vw;}
 }
 
-p {
+p, ul {
 	color: #605f5e;
 	line-height: 170%;
-	font-size: 22px;
+	font-size: 20px;
 	@include media-breakpoint-down(sm) {font-size: 3vw;}
 	@include media-breakpoint-down(xs) {font-size: 4vw;}
+}
+ul.list-blue {
+	li {
+		list-style: none;
+		&:before {
+			content: '•';
+			color: #00a3d8;
+			margin-right: .6rem;
+    		font-size: 1.6rem;
+		}
+	}
+
 }
 
 // overwriting bootstrap's ADA focus styles
