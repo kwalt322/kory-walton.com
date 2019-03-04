@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- start html header -->
+<%- partial("_partials/_html-header") %>
+<!-- end html header -->
+
+<body>
+  <!-- pushy mobile nav -->
+  <%- partial("_partials/_mobile-nav") %>
+  <!-- end pushy mobile nav -->
+
+
+  <header class="container-fluid gradient-blue">
+    <div class="container bg-code">
+      <!-- start desktop nav -->
+      <%- partial("_partials/_navigation") %>
+      <!-- end desktop nav -->
+
+      <div class="row">
+        <div class="col-12 pb-3">
+          <img src="images/textured_deer_2x.png" class="deer mx-auto d-block" width="30%">
+          <img class="arrow mx-auto d-block" src="images/icon_arrows.svg" width="50" height="50">
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="row mb-5">
+      <div class="col-10 offset-1 mb-2">
+       <h1>Contact</h1>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium odio eget nisl efficitur aliquet. Aliquam et tortor rutrum augue aliquam fringilla. Nunc viverra molestie dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium odio eget nisl efficitur aliquet. Aliquam et tortor rutrum.</p>
+      </div>
+      <div class="col-10 offset-1">
+        <button type="button" class="btn btn-primary btn-lg px-4">Send an Email</button>
+      </div>
+    </div>
+    
+  </main>
+
+  <!-- start footer -->
+  <%- partial("_partials/_footer") %>
+  <!-- end footer -->
+
+  <!-- start footer scripts -->
+  <%- partial("_partials/_footer-scripts") %>
+  <!-- end footer scripts -->
+
+</body>
+</html>

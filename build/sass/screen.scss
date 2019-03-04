@@ -66,7 +66,7 @@ body {
 	.border-right {border-right: 3px solid #fdcc00 !important;}
 }
 
-
+.mt-negative {margin-top: -120px;}
 
 nav {
 	font-family: 'amaticbold';
@@ -76,6 +76,7 @@ nav {
 		position: relative;
 		@include media-breakpoint-up(md) {
 			&:hover {
+				cursor: pointer;
 				.nav-link {
 					&:after {
 						opacity: 1;
@@ -124,6 +125,25 @@ nav {
 	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 70%,rgba(195,195,195,0) 77%,rgba(0,0,0,0.2) 100%);
 	background: linear-gradient(to bottom, rgba(255,255,255,0) 70%,rgba(195,195,195,0) 77%,rgba(0,0,0,0.2) 100%);
 }
+
+// Button Styles
+button {
+	&.btn-lg {
+		background-color: #ffffff;
+		border-radius:0px;
+		border: 2px solid #00a3d8;
+		color: #00a3d8;
+		&:hover, &:focus {
+			color: #ffffff;
+			background-color: #00a3d8;
+			border: 2px solid #00a3d8;
+			cursor: pointer;
+		}
+	}
+}
+
+
+
 
 .bg-code {
 	background-image: url("/images/bg_code.png");
@@ -237,11 +257,6 @@ nav {
 
 
 
-
-
-
-
-
 // MOBILE NAV MENU
 
 .animated-icon {
@@ -304,43 +319,43 @@ nav {
 	}
 }
 
-.animated-icon span:nth-child(1) {
-	top: 0px;
+
+.animated-icon {
+	span{
+		&:nth-child(1) {top: 0px;}
+		&:nth-child(2), &:nth-child(3) {top: 10px;}
+		&:nth-child(4) {top: 20px;}
+	}
+	&.open {
+		span {
+			&:nth-child(1) {
+				top: 11px;
+				width: 0%;
+				left: 50%;
+			}
+			&:nth-child(2) {
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+			&:nth-child(3) {
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+			}
+			&:nth-child(4) {
+				top: 11px;
+				width: 0%;
+				left: 50%;
+			}
+		}
+	}
 }
 
-.animated-icon span:nth-child(2), .animated-icon span:nth-child(3) {
-	top: 10px;
-}
 
-.animated-icon span:nth-child(4) {
-	top: 20px;
-}
 
-.animated-icon.open span:nth-child(1) {
-	top: 11px;
-	width: 0%;
-	left: 50%;
-}
-
-.animated-icon.open span:nth-child(2) {
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-.animated-icon.open span:nth-child(3) {
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-}
-
-.animated-icon.open span:nth-child(4) {
-	top: 11px;
-	width: 0%;
-	left: 50%;
-}
 
 
 // FOOTER Styles
