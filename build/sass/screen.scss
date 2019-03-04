@@ -68,38 +68,12 @@ body {
 
 
 
-nav, footer {
+nav {
 	font-family: 'amaticbold';
 	letter-spacing: 1px;
 	.nav-item {
 		font-size: 26px;
 		position: relative;
-		// mobile nav populate animation
-		// @keyframes navin {
-		// 	0% {
-		// 		transform: translate(6px, 0px);
-		// 		opacity: 0;
-		// 	}
-		// 	100% {
-		// 		transform: translate(0px, 0px);
-		// 		opacity: 1;
-		// 	}
-		// }
-		@include media-breakpoint-down(md) {
-			// &:nth-child(1) {
-			// 	animation-delay: 0s;
-			// 	-webkit-animation: navin .35s linear 1;
-	  //   		animation: navin .35s linear 1;
-	  //   		opacity: 1;
-			// }
-   //  		&:nth-child(2) {
-			// 	animation-delay: 1s;
-			// 	-webkit-animation: navin .35s linear 1;
-	  //   		animation: navin .35s linear 1;
-	  //   		opacity: 1;
-			// }
-		}
-		// end mobile nav populate animation
 		@include media-breakpoint-up(md) {
 			&:hover {
 				.nav-link {
@@ -368,6 +342,21 @@ nav, footer {
 	left: 50%;
 }
 
+
+// FOOTER Styles
+footer {
+	background: #002b40;
+	nav {
+		.nav-item {
+			.nav-link {
+				&:after {display:none;}
+				&:hover {
+					border-bottom: 2px solid #fdcc00;
+				}
+			}
+		}
+	}
+}
 
 
 
