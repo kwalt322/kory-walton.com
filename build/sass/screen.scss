@@ -172,11 +172,11 @@ button {
 	min-width: 180px;
 }
 
+// Sprite Logos
 
-
-// .dots {
-// 	@include sprite($greenline);
-// }
+.logo-wawa-grey {
+	@include sprite($logo_wawa_grey);
+}
 
 // Tile Animation
 .tile {
