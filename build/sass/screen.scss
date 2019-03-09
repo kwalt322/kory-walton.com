@@ -78,8 +78,6 @@ body {
 	.border-right {border-right: 3px solid #fdcc00 !important;}
 }
 
-.mt-negative {margin-top: -120px;}
-
 nav {
 	font-family: 'amaticbold';
 	letter-spacing: 1px;
@@ -174,9 +172,8 @@ button {
 
 // Sprite Logos
 
-.logo-wawa-grey {
-	@include sprite($logo_wawa_grey);
-}
+.logo-wawa-grey {@include sprite($logo_wawa_grey);}
+.logo-mandt-grey {@include sprite($logo_mandt_grey);}
 
 // Tile Animation
 .tile {
@@ -263,8 +260,6 @@ button {
 		background: -webkit-linear-gradient(top, #000000 55%,#002b40 69%);
 		background: linear-gradient(to bottom, #000000 55%,#002b40 69%);
 	}
-
-
 }
 
 
@@ -274,6 +269,7 @@ button {
 .animated-icon {
 	width: 30px;
 	height: 20px;
+	top: -40px;
 	position: relative;
 	margin: 0px;
 	-webkit-transform: rotate(0deg);
@@ -322,16 +318,16 @@ button {
 		width: 100%;
 		text-align: right;
 	}
-	// fix to push icon from wrapping to new line
-	.navbar-toggler {
-		margin-left: 50px;
-	}
 	.negative-margin {
 		margin-top: -165px;
 	}
+	.logo {
+		width: 75%;
+		max-width: 230px;
+	}
 }
 
-
+.mt-negative {margin-top: -100px;}
 .animated-icon {
 	span{
 		&:nth-child(1) {top: 0px;}
