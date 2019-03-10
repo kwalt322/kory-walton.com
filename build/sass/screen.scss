@@ -9,20 +9,20 @@ $base-color: #C6538C;
 /// Global Fonts
 @font-face {
   font-family: 'amaticscregular';
-  src: url("/fonts/amatic/amatic-regular-webfont.eot");
-  src: url("/fonts/amatic/amatic-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/amatic/amatic-regular-webfont.woff2") format("woff2"), url("/fonts/amatic/amatic-regular-webfont.woff") format("woff"), url("/fonts/amatic/amatic-regular-webfont.ttf") format("truetype"), url("/fonts/amatic/amatic-regular-webfont.svg#amatic_scregular") format("svg");
+  src: url("../fonts/amatic/amatic-regular-webfont.eot");
+  src: url("../fonts/amatic/amatic-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/amatic/amatic-regular-webfont.woff2") format("woff2"), url("../fonts/amatic/amatic-regular-webfont.woff") format("woff"), url("../fonts/amatic/amatic-regular-webfont.ttf") format("truetype"), url("../fonts/amatic/amatic-regular-webfont.svg#amatic_scregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'amaticbold';
-  src: url("/fonts/amatic/amatic-bold-webfont.eot");
-  src: url("/fonts/amatic/amatic-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/amatic/amatic-bold-webfont.woff2") format("woff2"), url("/fonts/amatic/amatic-bold-webfont.woff") format("woff"), url("/fonts/amatic/amatic-bold-webfont.ttf") format("truetype"), url("/fonts/amatic/amatic-bold-webfont.svg#amaticbold") format("svg");
+  src: url("../fonts/amatic/amatic-bold-webfont.eot");
+  src: url("../fonts/amatic/amatic-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/amatic/amatic-bold-webfont.woff2") format("woff2"), url("../fonts/amatic/amatic-bold-webfont.woff") format("woff"), url("../fonts/amatic/amatic-bold-webfont.ttf") format("truetype"), url("../fonts/amatic/amatic-bold-webfont.svg#amaticbold") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'tisaproregular';
-  src: url("/fonts/tisa/tisapro-regular-webfont.eot");
-  src: url("/fonts/tisa/tisapro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/tisa/tisapro-regular-webfont.woff2") format("woff2"), url("/fonts/tisa/tisapro-regular-webfont.woff") format("woff"), url("/fonts/tisa/tisapro-regular-webfont.ttf") format("truetype"), url("/fonts/tisa/tisapro-regular-webfont.svg#tisaproregular") format("svg");
+  src: url("../fonts/tisa/tisapro-regular-webfont.eot");
+  src: url("../fonts/tisa/tisapro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/tisa/tisapro-regular-webfont.woff2") format("woff2"), url("../fonts/tisa/tisapro-regular-webfont.woff") format("woff"), url("../fonts/tisa/tisapro-regular-webfont.ttf") format("truetype"), url("../fonts/tisa/tisapro-regular-webfont.svg#tisaproregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -156,7 +156,7 @@ button {
 
 
 .bg-code {
-	background-image: url("/images/bg_code.png");
+	background-image: url("../images/bg_code.png");
 	background-repeat: no-repeat;
 }
 
@@ -265,11 +265,15 @@ button {
 
 
 // MOBILE NAV MENU
+.animated-wrapper {
+	position: relative;
+	top: -40px;
+	right: -15px;
+}
 
 .animated-icon {
 	width: 30px;
 	height: 20px;
-	top: -40px;
 	position: relative;
 	margin: 0px;
 	-webkit-transform: rotate(0deg);
