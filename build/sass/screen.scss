@@ -171,7 +171,6 @@ button {
 }
 
 // Sprite Logos
-
 .logo-wawa-grey {@include sprite($logo_wawa_grey);}
 .logo-mandt-grey {@include sprite($logo_mandt_grey);}
 .logo-car-grey {@include sprite($logo_car_grey);}
@@ -183,6 +182,9 @@ button {
 .logo-morningstar-grey {@include sprite($logo_morningstar_grey);}
 .logo-planetfitness-grey {@include sprite($logo_planetfitness_grey);}
 .logo-reyka-grey {@include sprite($logo_reyka_grey);}
+.logo-ripken-grey {@include sprite($logo_ripken_grey);}
+.logo-swarovski-grey {@include sprite($logo_swarovski_grey);}
+.logo-rewards-grey {@include sprite($logo_rewards_grey);}
 
 // Tile Animation
 .tile {
