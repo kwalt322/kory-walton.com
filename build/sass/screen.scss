@@ -158,6 +158,7 @@ button {
 .bg-code {
 	background-image: url("../images/bg_code.png");
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 @keyframes arrowpulse {
@@ -253,6 +254,7 @@ button {
 		background: -moz-linear-gradient(top, #000000 55%, #002b40 79%);
 		background: -webkit-linear-gradient(top, #000000 55%,#002b40 79%);
 		background: linear-gradient(to bottom, #000000 55%,#002b40 79%);
+		img {width: 100%;}
 		.logo {
 			opacity: 1;
 			bottom: 43px;
