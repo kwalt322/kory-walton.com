@@ -3,7 +3,7 @@
 
 
 /// Base color
-$base-color: #C6538C;
+$dk-grey: #605f5e;
 
 
 /// Global Fonts
@@ -42,7 +42,7 @@ h1 {
 }
 
 p, ul {
-	color: #605f5e;
+	color: $dk-grey;
 	line-height: 170%;
 	font-size: 20px;
 	@include media-breakpoint-down(sm) {font-size: 3vw;}
@@ -186,6 +186,13 @@ button {
 .logo-ripken-grey {@include sprite($logo_ripken_grey);}
 .logo-swarovski-grey {@include sprite($logo_swarovski_grey);}
 .logo-rewards-grey {@include sprite($logo_rewards_grey);}
+.logo-honestkitchen-sm {@include sprite($logo_honestkitchen_sm);}
+.logo-dial-sm {@include sprite($logo_dial_sm);}
+.logo-swarovski-sm {@include sprite($logo_swarovski_sm);}
+.logo-delmarva-sm {@include sprite($logo_delmarva_sm);}
+.logo-car-sm {@include sprite($logo_car_sm);}
+.logo-planetfitness-sm {@include sprite($logo_planetfitness_sm);}
+.logo-ripken-sm {@include sprite($logo_ripken_sm);}
 
 // Tile Animation
 .tile {
@@ -226,6 +233,7 @@ button {
 		transition: opacity 0.35s, transform 0.35s;
 		transition-delay: 0.05s;
 		z-index: 11;
+		color: #ffffff;
 	}
 	@include media-breakpoint-up(md) {
 		&:hover {
@@ -249,29 +257,24 @@ button {
 	}
 	@include media-breakpoint-down(sm) {
 		overflow: visible;
-		padding-bottom: 6rem;
-		background: #000000;
-		background: -moz-linear-gradient(top, #000000 55%, #002b40 79%);
-		background: -webkit-linear-gradient(top, #000000 55%,#002b40 79%);
-		background: linear-gradient(to bottom, #000000 55%,#002b40 79%);
-		img {width: 100%;}
+		padding-bottom: 3rem;
+		background: #e9f0f6;
+		border: 1px solid #dce5ec;
+		.background {
+			width: 100%;
+			border-bottom: 1px solid #dce5ec;
+		}
 		.logo {
 			opacity: 1;
-			bottom: 43px;
-			width: auto;
-			max-height: 43px;
+			bottom: 0px;
+			left: 0px;
 		}
 		.text {
 			opacity: 1;
 			bottom: 4%;
 			font-size: 16px;
+			color: $dk-grey;
 		}
-	}
-	@include media-breakpoint-down(xs) {
-		background: #000000;
-		background: -moz-linear-gradient(top, #000000 55%, #002b40 69%);
-		background: -webkit-linear-gradient(top, #000000 55%,#002b40 69%);
-		background: linear-gradient(to bottom, #000000 55%,#002b40 69%);
 	}
 }
 
@@ -337,10 +340,6 @@ button {
 	}
 	.negative-margin {
 		margin-top: -165px;
-	}
-	.logo {
-		width: 75%;
-		max-width: 230px;
 	}
 }
 
