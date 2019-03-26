@@ -73,14 +73,10 @@
 // mobile nav
 $('.second-button').on('click', function () {
   $('.animated-icon').toggleClass('open');
-}); // pathetic password validation
+}); // hiding deer until page loads
 
-$('#validate').on('click', function () {
-  if (password = "rawr") {
-    alert('Correct!');
-  } else {
-    alert('Wrong Password');
-  }
+$(document).ready(function () {
+  $('#deeranimation').fadeIn(1000);
 });
 
 /***/ })
