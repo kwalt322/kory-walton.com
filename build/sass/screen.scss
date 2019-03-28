@@ -41,6 +41,13 @@ h1 {
 	@include media-breakpoint-down(xs) {font-size: 10vw;}
 }
 
+a {
+	color: #00a1dc;
+	&:hover {
+		color: #00a1dc;
+	}
+}
+
 p, ul {
 	color: $dk-grey;
 	line-height: 170%;
@@ -143,12 +150,12 @@ button {
 	&.btn-lg {
 		background-color: #ffffff;
 		border-radius:0px;
-		border: 2px solid #00a3d8;
-		color: #00a3d8;
+		border: 2px solid #00a1dc;
+		color: #00a1dc;
 		&:hover, &:focus {
 			color: #ffffff;
-			background-color: #00a3d8;
-			border: 2px solid #00a3d8;
+			background-color: #00a1dc;
+			border: 2px solid #00a1dc;
 			cursor: pointer;
 		}
 	}
