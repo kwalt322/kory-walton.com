@@ -168,6 +168,10 @@ button {
 	background-image: url("../images/bg_code.png");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-size: contain;
+	@include media-breakpoint-down(sm) {
+		background-size:250%;
+	}
 }
 
 @keyframes arrowpulse {
@@ -176,7 +180,7 @@ button {
 }
 .arrow {animation: arrowpulse .5s linear infinite alternate;}
 .deer {
-	max-width: 280px;
+	max-width: 225px;
 	min-width: 180px;
 	opacity:0;
 	@include media-breakpoint-down(md) {
@@ -273,7 +277,7 @@ button {
 	}
 	@include media-breakpoint-down(sm) {
 		overflow: visible;
-		padding-bottom: 3rem;
+		padding-bottom: 5rem;
 		background: #e9f0f6;
 		border: 1px solid #dce5ec;
 		.background {
@@ -282,12 +286,13 @@ button {
 		}
 		.logo {
 			opacity: 1;
-			bottom: 0px;
-			left: 0px;
+			top: calc(100% - 4.4rem);
+			left: .5rem;
 		}
 		.text {
 			opacity: 1;
-			bottom: 4%;
+			left: 0;
+			bottom:0;
 			font-size: 16px;
 			color: $dk-grey;
 		}
@@ -297,6 +302,14 @@ button {
 
 
 // MOBILE NAV MENU
+
+@include media-breakpoint-down(md) {
+	.navbar {padding:0px;}
+	.navbar-toggler {
+		margin-top: -30px;
+	}
+}
+
 .animated-wrapper {
 	position: relative;
 	top: -40px;
@@ -396,35 +409,95 @@ button {
 
 // LOGIN Form Styles
 .login {
+	height: 45px;
 	a { text-decoration: none; }
 	input { border-style: none; background: transparent; outline: none; }
 	button { padding: 0; background: none; border: none; outline: none; }
+	.password-field {
+		// animate arrow on focus
+  		transition: width .3s;
+  		-webkit-transition: width .3s;
+  		width:calc(100% - 4px);
+		float:left;
+		background:#f5faff;
+		color:$dk-grey;
+		margin-left: 2px;
+		padding: 8px;
+		margin-top: 2px;
+		height: 41px;
+		&:focus {
+			//animate arrow on focus
+			width: calc(100% - 39px);
+			&+.submit {
+				width:35px;
+				opacity: 1;
+				-webkit-transition: opacity .7s ease-in;
+		       -moz-transition: opacity .7s ease-in;
+		        -ms-transition: opacity .7s ease-in;
+		         -o-transition: opacity .7s ease-in;
+		            transition: opacity .7s ease-in;
+		            transition-delay: .1s;
+			}
+		}
+	}
+	.submit {
+		height: 41px;
+		width: 0px;
+		background:transparent;
+		margin-top: 2px;
+		margin-right: 2px;
+    	font-size: 10px;
+    	opacity: 0;
+    	-webkit-transition: opacity .1s linear;
+       -moz-transition: opacity .1s linear;
+        -ms-transition: opacity .1s linear;
+         -o-transition: opacity .1s linear;
+            transition: opacity .1s linear;
+	}
 }
 
 .gradient-border {
-  --borderWidth: 3px;
-  background: #1D1F20;
+  background: transparent;
   position: relative;
-  border-radius: var(--borderWidth);
-  &:after {
-  	content: '';
-  position: absolute;
-  top: calc(-1 * var(--borderWidth));
-  left: calc(-1 * var(--borderWidth));
-  height: calc(100% + var(--borderWidth) * 2);
-  width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-  border-radius: calc(2 * var(--borderWidth));
-  z-index: -1;
-  animation: animatedgradient 3s ease alternate infinite;
-  background-size: 300% 300%;
+  //error state wiggles background/gradient + password entry field
+  &.error {
+  	&:after {
+		background: #9c1709;
+		animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  		transform: translate3d(0, 0, 0);
+  	}
+  	.password-field {
+  		animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  		transform: translate3d(0, 0, 0);
+  		caret-color: lime;
+  	}
   }
+  //animated border gradient
+  &:after {
+  	  content: '';
+	  position: absolute;
+	  top: 0px;
+	  left: 0px;
+	  height: 45px;
+	  width: 100%;
+	  background: linear-gradient(60deg,#002b40, #00a3d8);
+	  z-index: -1;
+	  animation: animatedgradient 6s ease-in-out alternate infinite;
+	  background-size: 300% 300%;
+	}
 }
 
 @keyframes animatedgradient {
 	0% {background-position: 0% 50%;}
 	50% {background-position: 100% 50%;}
 	100% {background-position: 0% 50%;}
+}
+
+@keyframes shake {
+  10%, 90% {transform: translate3d(-1px, 0, 0);}
+  20%, 80% {transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+  40%, 60% {transform: translate3d(4px, 0, 0);}
 }
 
 
