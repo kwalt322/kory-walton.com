@@ -1,0 +1,55 @@
+<!doctype html>
+<!-- start html header -->
+<%- partial("_partials/_html-header") %>
+<!-- end html header -->
+
+<body>
+  <!-- pushy mobile nav -->
+  <%- partial("_partials/_mobile-nav") %>
+  <!-- end pushy mobile nav -->
+
+
+  <header class="container-fluid gradient-blue">
+    <div class="bg-code">
+      <div class="container px-0 px-md-auto">
+        <!-- start desktop nav -->
+        <%- partial("_partials/_navigation") %>
+        <!-- end desktop nav -->
+
+        <div class="row">
+          <div class="col-12 pb-3">
+            <div class="deer mx-auto d-block" id="deeranimation">
+              <%- partial("_partials/_deeranimation") %>
+            </div>
+            <img class="arrow mx-auto d-block" src="images/icon_arrows.svg" width="50" height="50">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-12 col-md-10 offset-0 offset-md-1 mb-md-5 mb-3">
+       <h1>Hello!</h1>
+       <p>As an engineer turned designer , I am endlessly seeking opportunities to ever increase my developer skills. I am thrilled to share these select projects and am honored to have been a part of these campaigns. </p>
+      </div>
+    </div>
+
+    <!-- Homepage tiles -->
+    <%- partial("_partials/_tiles-content") %>
+    <!-- end Homepage tiles -->
+    
+  </main>
+
+  <!-- start footer -->
+  <%- partial("_partials/_footer") %>
+  <!-- end footer -->
+
+  <!-- start footer scripts -->
+  <%- partial("_partials/_footer-scripts") %>
+  <!-- end footer scripts -->
+
+</body>
+</html>

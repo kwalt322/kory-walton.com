@@ -91,6 +91,9 @@ nav {
 	.nav-item {
 		font-size: 26px;
 		position: relative;
+		@include media-breakpoint-down(sm) {
+			font-size: 20px;
+		}
 		@include media-breakpoint-up(md) {
 			&:hover {
 				cursor: pointer;
@@ -183,6 +186,7 @@ button {
 	max-width: 225px;
 	min-width: 180px;
 	opacity:0;
+	width: 100%;
 	@include media-breakpoint-down(md) {
 		width: 50%;
 	}
@@ -429,7 +433,8 @@ button {
 			//animate arrow on focus
 			width: calc(100% - 39px);
 			&+.submit {
-				width:35px;
+				// transform: translate(-37px, 0px);
+			// 	width:35px;
 				opacity: 1;
 				-webkit-transition: opacity .7s ease-in;
 		       -moz-transition: opacity .7s ease-in;
@@ -442,17 +447,19 @@ button {
 	}
 	.submit {
 		height: 41px;
-		width: 0px;
-		background:transparent;
-		margin-top: 2px;
-		margin-right: 2px;
-    	font-size: 10px;
+    width: 35px;
+    background: transparent;
+    display: block;
+    position: absolute;
+    right: 2px;
+    top: 2px;
     	opacity: 0;
     	-webkit-transition: opacity .1s linear;
        -moz-transition: opacity .1s linear;
         -ms-transition: opacity .1s linear;
          -o-transition: opacity .1s linear;
             transition: opacity .1s linear;
+            transition-delay: 1s;
 	}
 }
 
@@ -469,7 +476,6 @@ button {
   	.password-field {
   		animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   		transform: translate3d(0, 0, 0);
-  		caret-color: lime;
   	}
   }
   //animated border gradient
