@@ -135,7 +135,12 @@ nav {
 
 
 
-
+.sahara-bg {
+	background: url("../images/sahara-blurred.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #092d4d;
+}
 .gradient-blue {
 	background: -moz-linear-gradient(top, rgba(0,43,64,1) 14%, rgba(43,79,98,1) 45%, rgba(245,250,255,1) 100%);
 	background: -webkit-linear-gradient(top, rgba(0,43,64,1) 14%,rgba(43,79,98,1) 45%,rgba(245,250,255,1) 100%);

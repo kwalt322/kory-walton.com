@@ -3,72 +3,40 @@
 <%- partial("_partials/_html-header") %>
 <!-- end html header -->
 
-<body>
+<body class="sahara-bg">
   <!-- pushy mobile nav -->
-  <%- partial("_partials/_mobile-nav") %>
+  
   <!-- end pushy mobile nav -->
 
 
-  <header class="container-fluid gradient-blue">
-    <div class="container bg-code">
+  <header class="container-fluid">
+    <div class="container">
       <!-- start desktop nav -->
       <%- partial("_partials/_navigation-blocked") %>
-      <!-- end desktop nav -->
-
-      <div class="row">
-        <div class="col-12 pb-3">
-          <div class="deer mx-auto d-block" id="deeranimation">
-            <%- partial("_partials/_deeranimation") %>
-          </div>
-        </div>
-      </div>
-
+      <!-- end desktop nav --> 
     </div>
   </header>
 
+  <main>
+
   <div class="container">
     <div class="row">
-      <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center">
+      <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 my-5">
+
         <p class="text-left m-0"><small>Password</small></p>
-
-        <!-- <form name="login" class="login gradient-border">
-          <input type="text" name="pass" class="password-field" onkeydown="if(event.keyCode==13) return false;"><br>
-          <button type="button" class="submit" onclick="javascript:TheLogin(this.form)"><img src="images/arrow.svg"></button>
-        </form> -->
-
         <form name="login" id="box" class="login gradient-border">
           <input type="text" name="pass" class="password-field" onkeydown="if(event.keyCode==13) return false;" >
           <button type="button" class="submit" value="Click to Login" onclick="javascript:TheLogin(this.form)" autocomplete="off"><img src="images/arrow.svg"></button>
         </form>
+      </div>
       
-      </div>
     </div>
 
-    <div class="row">
-      <div class="col-10 offset-1 text-center mt-5">
-        <span class="logo m-3 logo-wawa-grey d-inline-block"></span>
-        <span class="logo m-3 logo-mandt-grey d-inline-block"></span>
-        <span class="logo m-3 logo-car-sm d-inline-block"></span>
-        <span class="logo m-3 logo-delmarva-sm d-inline-block"></span>
-        <span class="logo m-3 logo-dial-sm d-inline-block"></span>
-        <span class="logo m-3 logo-honestkitchen-sm d-inline-block"></span>
-        <span class="logo m-3 logo-united-grey d-inline-block"></span>
-        <span class="logo m-3 logo-morningstar-grey d-inline-block"></span>
-        <span class="logo m-3 logo-planetfitness-sm d-inline-block"></span>
-        <span class="logo m-3 logo-reyka-grey d-inline-block"></span>
-        <span class="logo m-3 logo-ripken-sm d-inline-block"></span>
-        <span class="logo m-3 logo-swarovski-grey d-inline-block"></span>
-        <span class="logo m-3 logo-rewards-grey d-inline-block"></span>
+    <div class="deer mx-auto d-block" id="deeranimation">
+        <%- partial("_partials/_deeranimation") %>
       </div>
-    </div>
-  </div>
-
-    
   </main>
 
-  <!-- start footer -->
-  <%- partial("_partials/_footer") %>
-  <!-- end footer -->
 
   <!-- start footer scripts -->
   <%- partial("_partials/_footer-scripts") %>
