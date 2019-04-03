@@ -4,6 +4,9 @@
 
 /// Base color
 $dk-grey: #605f5e;
+$yellow: #ffcd3e;
+$grey-blue: rgba(245,250,255,1);
+$light-blue: #9abfd7;
 
 
 /// Global Fonts
@@ -55,6 +58,9 @@ p, ul {
 	@include media-breakpoint-down(sm) {font-size: 3vw;}
 	@include media-breakpoint-down(xs) {font-size: 4vw;}
 }
+.text-yellow {
+	color: $yellow;
+}
 ul.list-blue {
 	li {
 		list-style: none;
@@ -76,7 +82,7 @@ button {
 }
 
 body {
-	background: rgba(245,250,255,1);
+	background: $grey-blue;
 	font-family: 'tisaproregular';
 }
 
@@ -134,12 +140,20 @@ nav {
 
 
 
-
-.sahara-bg {
+.sahara-blurred-bg {
 	background: url("../images/sahara-blurred.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-color: #092d4d;
+}
+.sahara-bg {
+	background: url("../images/sahara.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #092d4d;
+	&.bg-fixed {
+		background-attachment: fixed;
+	}
 }
 .gradient-blue {
 	background: -moz-linear-gradient(top, rgba(0,43,64,1) 14%, rgba(43,79,98,1) 45%, rgba(245,250,255,1) 100%);
@@ -170,16 +184,27 @@ button {
 }
 
 
-
-
-.bg-code {
-	background-image: url("../images/bg_code.png");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: contain;
-	@include media-breakpoint-down(sm) {
-		background-size:250%;
+.border-header {
+	background: $grey-blue;
+	position: relative;
+  	border-top: 4px solid $light-blue;
+	@include media-breakpoint-up(sm) {
+		&:after, &:before {
+		  content: "";
+		  position: absolute;
+		  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($light-blue), to(transparent));
+		  background-image: -webkit-linear-gradient($light-blue, transparent);
+		  background-image: -moz-linear-gradient($light-blue, transparent);
+		  background-image: -o-linear-gradient($light-blue, transparent);
+		  background-image: linear-gradient($light-blue, transparent);
+		  top: -4px;
+		  bottom: -4px;
+		  width: 4px;
+		}
+		&:before {left: -4px;}
+		&:after {right: -4px;}
 	}
+	
 }
 
 @keyframes arrowpulse {
