@@ -4,10 +4,6 @@
 <!-- end html header -->
 
 <body class="sahara-blurred-bg">
-  <!-- pushy mobile nav -->
-  
-  <!-- end pushy mobile nav -->
-
 
   <header class="container-fluid">
     <div class="container">
@@ -24,17 +20,28 @@
       <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 my-5">
 
         <p class="text-left m-0 text-white"><small>Password</small></p>
-        <form name="login" id="box" class="login gradient-border">
-          <input type="text" name="pass" class="password-field" onkeydown="if(event.keyCode==13) return false;" >
+         <form name="loginform" id="box" class="login gradient-border" onSubmit="return validateForm();" action="work.html" method="post">
+            <input type="password" name="pword" class="password-field">
+            <input type="image" class="submit" src="images/arrow.svg" />
+          </form> 
+
+
+
+        <!-- <form name="login" id="box" class="login gradient-border">
+          
+          <input type="text" name="pass" class="password-field">
+          
           <button type="button" class="submit" value="Click to Login" onclick="javascript:TheLogin(this.form)" autocomplete="off"><img src="images/arrow.svg"></button>
-        </form>
+        
+        </form> -->
       </div>
       
     </div>
 
     <div class="deer mx-auto d-block" id="deeranimation">
-        <%- partial("_partials/_deeranimation") %>
-      </div>
+      <%- partial("_partials/_deeranimation") %>
+    </div>
+
   </main>
 
 
@@ -42,24 +49,42 @@
   <%- partial("_partials/_footer-scripts") %>
   <!-- end footer scripts -->
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 // PASSWORD PROTECTION SCRIPT
 
+$(document).on('keypress', function(e) {
+  if(e.which == 13) {
+    alert('you pressed enter');
+    TheLogin();
+  }
+});
+
 function TheLogin() {
-
 var password = 'open';
-
 if (this.document.login.pass.value == password) {
   top.location.href="work.html";
 }
 else {
   $('#box').addClass("error");
-  
   }
 }
 
+</script> -->
+<script>
+    function validateForm() {
+        
+        var pw = document.loginform.pword.value;
+        
+        var password = "password";
+        if ((pw == password)) {
+            return true;
+        }
+        else {
+            $('#box').addClass("error");
+            return false;
+        }
+  }
 </script>
-
 
 
 </body>

@@ -11,8 +11,11 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <meta name="robots" contents="noindex">
+  <meta name="googlebot" content="noindex" />
   <link rel="stylesheet" href="css/screen.css">
 </head>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
 <!-- end html header -->
 
 <body>
@@ -37,14 +40,14 @@
   <!-- end pushy mobile nav -->
 
 
-  <header class="container-fluid gradient-blue">
+  <header class="container-fluid sahara-bg bg-fixed pb-5">
     <div class="bg-code">
       <div class="container px-0 px-md-auto">
       <!-- start desktop nav -->
       <nav class="navbar pb-5 px-0">
   <div class="col-9 col-md-auto p-0">
-    <a class="navbar-brand" href="/">
-      <img src="images/logo_kory_mobile.png" class="d-inline-block align-top logo">
+    <a class="navbar-brand" href="/work">
+      <img src="images/logo_kory_mobile_2x.png" width="206" class="d-inline-block align-top logo">
       <span class="sr-only">Kory - Hybrid Developer</span>
     </a>
   </div>
@@ -66,7 +69,7 @@
         <a href="/about" class="nav-link pt-2 pt-md-0">About</a>
       </li>
       <li class="nav-item mr-0 mr-md-3 d-block d-md-flex w-md-auto">
-        <a href="/#work" class="nav-link pt-2 pt-md-0">Work</a>
+        <a href="/work" class="nav-link pt-2 pt-md-0">Work</a>
       </li>
       <li class="nav-item d-block d-md-flex w-md-auto">
         <a href="/contact" class="nav-link pt-2 pt-md-0">Contact</a>
@@ -80,17 +83,15 @@
   </header>
 
   <main class="container">
-    <div class="row">
-      <div class="col-12 col-md-auto offset-0 offset-md-1 col-md-auto order-last order-md-first d-block d-md-inline">
+    <div class="row mt-n5 mx-md-n5">
+      <div class="col-12 col-md-10 offset-0 offset-md-1 border-header px-4 pt-4 px-sm-5">
+       <div class="order-last order-md-first d-block d-md-inline">
         <h1 class="d-inline">Account Selector</h1>
       </div>
-      <div class="col-12 col-md-auto d-inline h-auto align-text-bottom mt-4">
+      <div class="col-12 col-md-auto d-inline-block h-auto align-text-bottom p-0 ml-md-3 ml-n2 mb-3 mb-md-0">
         <span class="logo-mandt-grey d-inline-block"></span>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-12 col-md-10 offset-0 offset-md-1 mt-2">
-        <p>Account Selector was built to be an overview of all checking accounts that M&amp;T has to offer. Traffic would be driven to the page through email and banner promotions. I was responsible for the local static carve and worked with the creative team to discuss animations and page interactions. I was also responsible for maintaining ADA compliancy through design as well as screen-reader content. The project was then integrated with Umbraco to allow easy addition of accounts and regional offerings.</p>
+       <p>Account Selector was built to be an overview of all checking accounts that M&amp;T has to offer. Traffic would be driven to the page through email and banner promotions. I was responsible for the local static carve and worked with the creative team to discuss animations and page interactions. I was also responsible for maintaining ADA compliancy through design as well as screen-reader content. The project was then integrated with Umbraco to allow easy addition of accounts and regional offerings.</p>
        <ul class="pl-2 list-blue">
         <li><a href="https://umbraco.com/" target="_blank">Umbraco</a> CMS Integration</li>
           <li><a href="https://gulpjs.com/" target="_blank">Gulp</a> / <a href="http://harpjs.com/" target="_blank">Harp</a> Local Build</li>
@@ -99,6 +100,18 @@
         <a href="https://checking.mtb.com/">
           <button type="button" class="btn btn-primary btn-lg px-5 mt-2 col-12 col-md-auto">Visit Website</button>
         </a>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="row">
+      <div class="col-12 col-md-10 offset-0 offset-md-1 mt-2">
+        
+       
       </div>
     </div>
 
@@ -130,10 +143,10 @@
   </main>
 
   <!-- start footer -->
-  <footer class="container-fluid mt-5">
+  <footer class="container-fluid mt-5 sahara-bg bg-fixed">
     <div class="container">
     <div class="row">
-      <nav class="col-12 py-4">
+      <nav class="col-12 py-3">
         <div class="mx-auto d-block text-center h-60 mt-3">
           <a class="d-inline-block icon mx-2" href="https://www.instagram.com/pixel.tots/">
             <img src="/images/instagram.svg">
@@ -143,7 +156,6 @@
           </a>
         </div>
         <p class="text-white text-center"><small>&copy; <span id="copyright"> <script>$('#copyright').text(new Date().getFullYear());</script> </span> Kory Walton. Some Rights Reserved.</small></p>
-        
       </nav>
     </div>
   </div>
@@ -151,10 +163,9 @@
   <!-- end footer -->
 
   <!-- start footer scripts -->
-  <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   
-  <script src="js/bundle.js"></script>
+<script src="js/bundle.js"></script>
 
   <!-- end footer scripts -->
 

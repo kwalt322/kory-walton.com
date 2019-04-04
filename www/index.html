@@ -11,54 +11,52 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <meta name="robots" contents="noindex">
+  <meta name="googlebot" content="noindex" />
   <link rel="stylesheet" href="css/screen.css">
 </head>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
 <!-- end html header -->
 
-<body>
+<body class="sahara-blurred-bg">
   <!-- pushy mobile nav -->
-  <div class="container-fluid gradient-shadow d-block d-md-none">
-    <nav class="navbar p-0">
-      <div class="collapse navbar-collapse justify-content-end" id="mobile-nav">
-        <ul class="nav justify-content-center my-3">
-          <li class="nav-item col-4 text-center border-right">
-            <a href="/about" class="text-dark px-sm-3 px-0">About</a>
-          </li>
-          <li class="nav-item col-4 text-center border-right">
-            <a href="/work" class="text-dark px-sm-3 px-0">Work</a>
-          </li>
-          <li class="nav-item col-4 text-center">
-            <a href="/contact" class="text-dark px-sm-3 px-0">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+  
   <!-- end pushy mobile nav -->
 
 
-  <header class="container-fluid gradient-blue">
-    <div class="container bg-code">
+  <header class="container-fluid">
+    <div class="container">
       <!-- start desktop nav -->
       <nav class="navbar">
-  <a class="navbar-brand" href="/password">
+  <a class="navbar-brand" href="/">
     <img src="images/logo_kory.svg" width="140" height="85" class="d-inline-block align-top">
     <span class="sr-only">Kory - Hybrid Developer</span>
   </a>
 
-  <button class="navbar-toggler second-button d-xs-flex d-md-none" type="button" data-toggle="collapse" data-target="#mobile-nav" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation">
-    <div class="animated-icon"><span></span><span></span><span></span><span></span></div>
-  </button>
-
 </nav>
 
 
-      <!-- end desktop nav -->
+      <!-- end desktop nav --> 
+    </div>
+  </header>
 
-      <div class="row">
-        <div class="col-12 pb-3">
-          <div class="deer mx-auto d-block" id="deeranimation">
-            <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+  <main>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 my-5">
+
+        <p class="text-left m-0 text-white"><small>Password</small></p>
+        <form name="login" id="box" class="login gradient-border">
+          <input type="text" name="pass" class="password-field" onkeydown="if(event.keyCode==13) return false;" >
+          <button type="button" class="submit" value="Click to Login" onclick="javascript:TheLogin(this.form)" autocomplete="off"><img src="images/arrow.svg"></button>
+        </form>
+      </div>
+      
+    </div>
+
+    <div class="deer mx-auto d-block" id="deeranimation">
+        <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" charset="utf-8">
       $( "#deeranimation" ).animate({
     opacity: 1
@@ -102,79 +100,14 @@
     });
 })();
 </script>
-          </div>
-        </div>
       </div>
-
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center">
-        <p class="text-left m-0"><small>Password</small></p>
-
-        <!-- <form name="login" class="login gradient-border">
-          <input type="text" name="pass" class="password-field" onkeydown="if(event.keyCode==13) return false;"><br>
-          <button type="button" class="submit" onclick="javascript:TheLogin(this.form)"><img src="images/arrow.svg"></button>
-        </form> -->
-
-        <form name="login" id="box" class="login gradient-border">
-          <input type="text" name="pass" class="password-field" onkeydown="if(event.keyCode==13) return false;" >
-          <button type="button" class="submit" value="Click to Login" onclick="javascript:TheLogin(this.form)" autocomplete="off"><img src="images/arrow.svg"></button>
-        </form>
-      
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-10 offset-1 text-center mt-5">
-        <span class="logo m-3 logo-wawa-grey d-inline-block"></span>
-        <span class="logo m-3 logo-mandt-grey d-inline-block"></span>
-        <span class="logo m-3 logo-car-sm d-inline-block"></span>
-        <span class="logo m-3 logo-delmarva-sm d-inline-block"></span>
-        <span class="logo m-3 logo-dial-sm d-inline-block"></span>
-        <span class="logo m-3 logo-honestkitchen-sm d-inline-block"></span>
-        <span class="logo m-3 logo-united-grey d-inline-block"></span>
-        <span class="logo m-3 logo-morningstar-grey d-inline-block"></span>
-        <span class="logo m-3 logo-planetfitness-sm d-inline-block"></span>
-        <span class="logo m-3 logo-reyka-grey d-inline-block"></span>
-        <span class="logo m-3 logo-ripken-sm d-inline-block"></span>
-        <span class="logo m-3 logo-swarovski-grey d-inline-block"></span>
-        <span class="logo m-3 logo-rewards-grey d-inline-block"></span>
-      </div>
-    </div>
-  </div>
-
-    
   </main>
 
-  <!-- start footer -->
-  <footer class="container-fluid mt-5">
-    <div class="container">
-    <div class="row">
-      <nav class="col-12 py-4">
-        <div class="mx-auto d-block text-center h-60 mt-3">
-          <a class="d-inline-block icon mx-2" href="https://www.instagram.com/pixel.tots/">
-            <img src="/images/instagram.svg">
-          </a>
-          <a class="d-inline-block icon mx-2" href="https://github.com/kwalt322">
-            <img src="/images/github.svg">
-          </a>
-        </div>
-        <p class="text-white text-center"><small>&copy; <span id="copyright"> <script>$('#copyright').text(new Date().getFullYear());</script> </span> Kory Walton. Some Rights Reserved.</small></p>
-        
-      </nav>
-    </div>
-  </div>
-</footer>
-  <!-- end footer -->
 
   <!-- start footer scripts -->
-  <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   
-  <script src="js/bundle.js"></script>
+<script src="js/bundle.js"></script>
 
   <!-- end footer scripts -->
 

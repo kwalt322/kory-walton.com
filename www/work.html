@@ -11,8 +11,11 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <meta name="robots" contents="noindex">
+  <meta name="googlebot" content="noindex" />
   <link rel="stylesheet" href="css/screen.css">
 </head>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
 <!-- end html header -->
 
 <body>
@@ -37,12 +40,11 @@
   <!-- end pushy mobile nav -->
 
 
-  <header class="container-fluid gradient-blue">
-    <div class="bg-code">
+  <header class="container-fluid sahara-bg bg-fixed pb-5">
       <div class="container px-0 px-md-auto">
         <!-- start desktop nav -->
         <nav class="navbar">
-  <a class="navbar-brand" href="/">
+  <a class="navbar-brand" href="/work">
     <img src="images/logo_kory.svg" width="140" height="85" class="d-inline-block align-top">
     <span class="sr-only">Kory - Hybrid Developer</span>
   </a>
@@ -57,7 +59,7 @@
         <a href="/about" class="nav-link pt-2 pt-md-0">About</a>
       </li>
       <li class="nav-item mr-0 mr-md-3 d-block d-md-flex w-md-auto">
-        <a href="/#work" class="nav-link pt-2 pt-md-0">Work</a>
+        <a href="/work" class="nav-link pt-2 pt-md-0">Work</a>
       </li>
       <li class="nav-item d-block d-md-flex w-md-auto">
         <a href="/contact" class="nav-link pt-2 pt-md-0">Contact</a>
@@ -68,7 +70,6 @@
 
 
         <!-- end desktop nav -->
-
         <div class="row">
           <div class="col-12 pb-3">
             <div class="deer mx-auto d-block" id="deeranimation">
@@ -120,14 +121,12 @@
             <img class="arrow mx-auto d-block" src="images/icon_arrows.svg" width="50" height="50">
           </div>
         </div>
-
       </div>
-    </div>
   </header>
 
   <main class="container">
-    <div class="row">
-      <div class="col-12 col-md-10 offset-0 offset-md-1 mb-md-5 mb-3">
+    <div class="row mt-n5 mx-md-n5">
+      <div class="col-12 col-md-10 offset-0 offset-md-1 mb-md-5 mb-3 border-header px-4 py-3 px-sm-5 py-sm-4">
        <h1>Hello!</h1>
        <p>As an engineer turned designer , I am endlessly seeking opportunities to ever increase my developer skills. I am thrilled to share these select projects and am honored to have been a part of these campaigns. </p>
       </div>
@@ -301,10 +300,10 @@
   </main>
 
   <!-- start footer -->
-  <footer class="container-fluid mt-5">
+  <footer class="container-fluid mt-5 sahara-bg bg-fixed">
     <div class="container">
     <div class="row">
-      <nav class="col-12 py-4">
+      <nav class="col-12 py-3">
         <div class="mx-auto d-block text-center h-60 mt-3">
           <a class="d-inline-block icon mx-2" href="https://www.instagram.com/pixel.tots/">
             <img src="/images/instagram.svg">
@@ -314,7 +313,6 @@
           </a>
         </div>
         <p class="text-white text-center"><small>&copy; <span id="copyright"> <script>$('#copyright').text(new Date().getFullYear());</script> </span> Kory Walton. Some Rights Reserved.</small></p>
-        
       </nav>
     </div>
   </div>
@@ -322,10 +320,9 @@
   <!-- end footer -->
 
   <!-- start footer scripts -->
-  <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   
-  <script src="js/bundle.js"></script>
+<script src="js/bundle.js"></script>
 
   <!-- end footer scripts -->
 

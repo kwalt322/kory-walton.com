@@ -142,8 +142,8 @@ nav {
 
 .sahara-blurred-bg {
 	background: url("../images/sahara-blurred.jpg");
-	background-size: 100%;
-	background-repeat: no-repeat;
+	background-size: 100% !important;
+	background-repeat: no-repeat !important;
 	background-color: #092d4d;
 }
 .sahara-bg {
@@ -596,7 +596,6 @@ button {
 
 footer {
 	p {font-family: 'tisaproregular';}
-	background: #002b40;
 	overflow:hidden;
 }
 
