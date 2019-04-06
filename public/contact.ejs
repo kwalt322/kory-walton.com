@@ -8,33 +8,38 @@
   <%- partial("_partials/_mobile-nav") %>
   <!-- end pushy mobile nav -->
 
-
-  <header class="container-fluid gradient-blue">
-    <div class="container bg-code">
+<header class="container-fluid sahara-bg pb-5">
+    <div class="bg-code">
+      <div class="container px-0 px-md-auto">
       <!-- start desktop nav -->
-      <%- partial("_partials/_navigation") %>
+      <%- partial("_partials/_navigation-small") %>
       <!-- end desktop nav -->
-
-      <div class="row">
-        <div class="col-12 pb-3">
-          <img src="images/textured_deer_2x.png" class="deer mx-auto d-block" width="30%">
-          <img class="arrow mx-auto d-block" src="images/icon_arrows.svg" width="50" height="50">
-        </div>
       </div>
-
     </div>
   </header>
 
-  <main class="container">
-    <div class="row mb-5">
-      <div class="col-10 offset-1 mb-2">
-       <h1>Contact</h1>
-       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium odio eget nisl efficitur aliquet. Aliquam et tortor rutrum augue aliquam fringilla. Nunc viverra molestie dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium odio eget nisl efficitur aliquet. Aliquam et tortor rutrum.</p>
+  <main class="container pb-5">
+    <div class="row mt-n5 mx-md-n5">
+      <div class="col-12 col-md-10 offset-0 offset-md-1 border-header px-4 pt-4 px-sm-5">
+       <div class="d-block d-md-inline">
+        <h1 class="d-inline">Contact</h1>
       </div>
-      <div class="col-10 offset-1">
-        <button type="button" class="btn btn-primary btn-lg px-4">Send an Email</button>
+       <p>If you enjoyed any of my work, please let me know! I love receiving emails and almost always respond within 24 hours.</p>
+       <p>I believe that form should follow function, but function should have a pleasing form. That is why I decided to pursue interactive and graphic design as well as engineering. I love seeing a project from start to finish. From concept to creation. I believe it is integral to any successful product or campaign.</p>
+      </div>
+      <div class="col-12 col-md-10 offset-0 offset-md-1 px-4 px-sm-5 mt-4">
+        <a href="mailto:korywalton@gmail.com">
+          <button type="button" class="btn btn-primary btn-lg px-5 mt-2 col-12 col-md-auto">Send Email</button>
+        </a>
       </div>
     </div>
+
+    <div class="row py-5">
+      <div class="col-12 col-md-10 offset-0 offset-md-1">
+        &nbsp;
+      </div>
+    </div>
+
     
   </main>
 

@@ -25,15 +25,6 @@
             <input type="image" class="submit" src="images/arrow.svg" />
           </form> 
 
-
-
-        <!-- <form name="login" id="box" class="login gradient-border">
-          
-          <input type="text" name="pass" class="password-field">
-          
-          <button type="button" class="submit" value="Click to Login" onclick="javascript:TheLogin(this.form)" autocomplete="off"><img src="images/arrow.svg"></button>
-        
-        </form> -->
       </div>
       
     </div>
@@ -49,33 +40,13 @@
   <%- partial("_partials/_footer-scripts") %>
   <!-- end footer scripts -->
 
-<!-- <script type="text/javascript">
-// PASSWORD PROTECTION SCRIPT
-
-$(document).on('keypress', function(e) {
-  if(e.which == 13) {
-    alert('you pressed enter');
-    TheLogin();
-  }
-});
-
-function TheLogin() {
-var password = 'open';
-if (this.document.login.pass.value == password) {
-  top.location.href="work.html";
-}
-else {
-  $('#box').addClass("error");
-  }
-}
-
 </script> -->
 <script>
     function validateForm() {
         
         var pw = document.loginform.pword.value;
         
-        var password = "password";
+        var password = "open";
         if ((pw == password)) {
             return true;
         }
@@ -84,6 +55,7 @@ else {
             return false;
         }
   }
+
 </script>
 
 

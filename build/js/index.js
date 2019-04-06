@@ -9,5 +9,5 @@
     
 
 $(document).ready(function() {
-    $('#deeranimation').fadeIn(1000);
+    $('#deeranimation').fadeIn(8000);
 });
