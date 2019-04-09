@@ -1,3 +1,17 @@
+
+
+/* Negative Margin Bootstrap Overwrite Band-Aid*/
+@media (min-width: 1197px) and (max-width: 1220px) {
+	.container .mx-lg-n5, .container .mx-md-n5 {margin-right: calc(-3rem + 10px) !important;}
+}
+@media (min-width: 992px) and (max-width: 1040px) {
+	.container .mx-lg-n5, .container .mx-md-n5 {margin-right: calc(-3rem + 30px) !important;}
+}
+@media (min-width: 767px) and (max-width: 802px) {
+	.container .mx-lg-n5, .container .mx-md-n5 {margin-right: calc(-3rem + 30px) !important;}
+}
+
+
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "_spritesheet";
 
@@ -7,7 +21,6 @@ $dk-grey: #605f5e;
 $yellow: #ffcd3e;
 $grey-blue: rgba(245,250,255,1);
 $light-blue: #9abfd7;
-
 
 /// Global Fonts
 @font-face {
