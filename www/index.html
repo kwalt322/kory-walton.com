@@ -13,16 +13,20 @@
   <meta name="robots" contents="noindex">
   <meta name="googlebot" content="noindex" />
   <link rel="stylesheet" href="css/screen.css">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-56983825-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </head>
 
 <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
 <!-- end html header -->
 
 <body class="sahara-blurred-bg">
-  <!-- pushy mobile nav -->
-  
-  <!-- end pushy mobile nav -->
-
 
   <header class="container-fluid">
     <div class="container">
@@ -47,16 +51,17 @@
       <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 my-5">
 
         <p class="text-left m-0 text-white"><small>Password</small></p>
-        <form name="login" id="box" class="login gradient-border">
-          <input type="text" name="pass" class="password-field" onkeydown="if(event.keyCode==13) return false;" >
-          <button type="button" class="submit" value="Click to Login" onclick="javascript:TheLogin(this.form)" autocomplete="off"><img src="images/arrow.svg"></button>
-        </form>
+         <form name="loginform" id="box" class="login gradient-border" onSubmit="return validateForm();" action="work.html" method="post">
+            <input type="password" name="pword" class="password-field">
+            <input type="image" class="submit" src="images/arrow.svg" />
+          </form> 
+
       </div>
       
     </div>
 
     <div class="deer mx-auto d-block" id="deeranimation">
-        <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" charset="utf-8">
       $( "#deeranimation" ).animate({
     opacity: 1
@@ -100,7 +105,9 @@
     });
 })();
 </script>
-      </div>
+    </div>
+  </div>
+
   </main>
 
 
@@ -111,24 +118,23 @@
 
   <!-- end footer scripts -->
 
-<script type="text/javascript">
-// PASSWORD PROTECTION SCRIPT
-
-function TheLogin() {
-
-var password = 'open';
-
-if (this.document.login.pass.value == password) {
-  top.location.href="work.html";
-}
-else {
-  $('#box').addClass("error");
-  
+</script> -->
+<script>
+    function validateForm() {
+        
+        var pw = document.loginform.pword.value;
+        
+        var password = "walton";
+        if ((pw == password)) {
+            return true;
+        }
+        else {
+            $('#box').addClass("error");
+            return false;
+        }
   }
-}
 
 </script>
-
 
 
 </body>

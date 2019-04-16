@@ -13,6 +13,14 @@
   <meta name="robots" contents="noindex">
   <meta name="googlebot" content="noindex" />
   <link rel="stylesheet" href="css/screen.css">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-56983825-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </head>
 
 <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -25,13 +33,13 @@
       <div class="collapse navbar-collapse justify-content-end" id="mobile-nav">
         <ul class="nav justify-content-center my-3">
           <li class="nav-item col-4 text-center border-right">
-            <a href="/about" class="text-dark px-sm-3 px-0">About</a>
+            <a href="/about.html" class="text-dark px-sm-3 px-0">About</a>
           </li>
           <li class="nav-item col-4 text-center border-right">
-            <a href="/work" class="text-dark px-sm-3 px-0">Work</a>
+            <a href="/work.html" class="text-dark px-sm-3 px-0">Work</a>
           </li>
           <li class="nav-item col-4 text-center">
-            <a href="/contact" class="text-dark px-sm-3 px-0">Contact</a>
+            <a href="/contact.html" class="text-dark px-sm-3 px-0">Contact</a>
           </li>
         </ul>
       </div>
@@ -39,63 +47,80 @@
   </div>
   <!-- end pushy mobile nav -->
 
-
-  <header class="container-fluid gradient-blue">
-    <div class="container bg-code">
+<header class="container-fluid sahara-bg pb-5">
+    <div class="bg-code">
+      <div class="container px-0 px-md-auto">
       <!-- start desktop nav -->
-      <nav class="navbar">
-  <a class="navbar-brand" href="/work">
-    <img src="images/logo_kory.svg" width="140" height="85" class="d-inline-block align-top">
-    <span class="sr-only">Kory - Hybrid Developer</span>
-  </a>
+      <nav class="navbar pb-5 px-0">
+  <div class="col-9 col-md-auto p-0">
+    <a class="navbar-brand" href="/work.html">
+      <img src="images/logo_kory_mobile_2x.png" width="206" class="d-inline-block align-top logo">
+      <span class="sr-only">Kory - Hybrid Developer</span>
+    </a>
+  </div>
 
-  <button class="navbar-toggler second-button d-xs-flex d-md-none" type="button" data-toggle="collapse" data-target="#mobile-nav" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation">
-    <div class="animated-icon"><span></span><span></span><span></span><span></span></div>
-  </button>
+  <div class="col-3 text-right">
+    <button class="navbar-toggler second-button d-xs-flex d-md-none animated-wrapper" type="button" data-toggle="collapse" data-target="#mobile-nav" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+  </div>
 
-  <div class="collapse navbar-collapse justify-content-end d-none d-md-block">
+  <div class="collapse navbar-collapse justify-content-end d-none d-md-block mt-negative">
     <ul class="nav justify-content-end">
       <li class="nav-item mr-0 mr-md-3 d-block d-md-flex w-md-auto">
-        <a href="/about" class="nav-link pt-2 pt-md-0">About</a>
+        <a href="/about.html" class="nav-link pt-2 pt-md-0">About</a>
       </li>
       <li class="nav-item mr-0 mr-md-3 d-block d-md-flex w-md-auto">
-        <a href="/work" class="nav-link pt-2 pt-md-0">Work</a>
+        <a href="/work.html" class="nav-link pt-2 pt-md-0">Work</a>
       </li>
       <li class="nav-item d-block d-md-flex w-md-auto">
-        <a href="/contact" class="nav-link pt-2 pt-md-0">Contact</a>
+        <a href="/contact.html" class="nav-link pt-2 pt-md-0">Contact</a>
       </li>
     </ul>
   </div>
 </nav>
-
-
       <!-- end desktop nav -->
-
-      <div class="row">
-        <div class="col-12 pb-3">
-          <img src="images/textured_deer_2x.png" class="deer mx-auto d-block" width="30%">
-          <img class="arrow mx-auto d-block" src="images/icon_arrows.svg" width="50" height="50">
-        </div>
       </div>
-
     </div>
   </header>
 
-  <main class="container">
-    <div class="row mb-5">
-      <div class="col-10 offset-1 mb-2">
-       <h1>Contact</h1>
-       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium odio eget nisl efficitur aliquet. Aliquam et tortor rutrum augue aliquam fringilla. Nunc viverra molestie dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium odio eget nisl efficitur aliquet. Aliquam et tortor rutrum.</p>
+  <main class="container pb-5">
+    <div class="row mt-n5 mx-md-n5">
+      <div class="col-12 col-md-10 offset-0 offset-md-1 border-header px-4 pt-4 px-sm-5">
+       <div class="d-block d-md-inline">
+        <h1 class="d-inline">Contact</h1>
       </div>
-      <div class="col-10 offset-1">
-        <button type="button" class="btn btn-primary btn-lg px-4">Send an Email</button>
+       <p class="mt-2">If you enjoyed any of my work, please let me know! I love receiving emails and almost always respond within 24 hours.</p>
+       <p>I believe that form should follow function, but function should have a pleasing form. That is why I decided to pursue interactive and graphic design as well as engineering. I love seeing a project from start to finish. From concept to creation. I believe it is integral to any successful product or campaign.</p>
+      </div>
+      <div class="col-12 col-md-10 offset-0 offset-md-1 px-4 px-sm-5 mt-4">
+        <a href="mailto:korywalton@gmail.com">
+          <button type="button" class="btn btn-primary btn-lg px-5 mt-2 col-12 col-md-auto">Send Email</button>
+        </a>
       </div>
     </div>
+
+    <div class="row py-5">
+      <div class="col-12 col-md-10 offset-0 offset-md-1">
+        &nbsp;
+      </div>
+    </div>
+    <div class="row py-5">
+      <div class="col-12 col-md-10 offset-0 offset-md-1">
+        &nbsp;
+      </div>
+    </div>
+
     
   </main>
 
   <!-- start footer -->
-  <footer class="container-fluid mt-5 sahara-bg bg-fixed">
+  <footer class="container-fluid mt-5 sahara-bg">
     <div class="container">
     <div class="row">
       <nav class="col-12 py-3">

@@ -76,7 +76,7 @@ $('.second-button').on('click', function () {
 }); // hiding deer until page loads
 
 $(document).ready(function () {
-  $('#deeranimation').fadeIn(1000);
+  $('#deeranimation').fadeIn(8000);
 });
 
 /***/ })
